@@ -42,4 +42,3 @@ form.addEventListener('submit', function(e) {
     formMessage.textContent = '❌ Error sending message.';
   });
 });
-
