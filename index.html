@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     
 </head>
+
+
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -38,50 +41,56 @@
             </div>
         </div>
     </div> 
-    <!-- Preloader Start-->
-<header>
-        <!-- Header Start -->
+
+ <header>
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- Logo -->
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        
         <a class="navbar-brand" href="index.html">
-            <img src="../assets/img/logo/preperlogo.png" alt="Logo" style="height:70px; width:auto;">
+          <img src="../assets/img/logo/preperlogo.png" alt="Logo" style="height:70px; width:auto;">
         </a>
 
-        <!-- Navbar toggler (mobillarga) -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
 
-        <!-- Menyu va til tugmalari -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Добро пожаловать</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Наши услуги</a></li>
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Наш опыт</a></li>
-            <li class="nav-item"><a class="nav-link" href="partner.html">Наши партнерства</a></li>
-            <li class="nav-item"><a class="nav-link" href="blog.html">Новости</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Связаться с нами</a></li>
-            </ul>
-        </div>
+                <!-- Brand -->
+                <a class="navbar-brand" href="#">KSHR</a>
 
-            <div class="d-none d-lg-flex language-buttons">
-            <a href="#" class="lgbtn btn btn-sm">Aнг</a>
-            <a href="#" class="lgbtn btn btn-sm">Ру</a>
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapse menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Добро пожаловать</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Наши услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Наш опыт</a></li>
+                    <li class="nav-item"><a class="nav-link" href="partner.html">Наши партнерства</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Связаться с нами</a></li>
+                </ul>
+                </div>
+
             </div>
+        </nav>
 
+
+        <div class="d-none d-lg-flex language-buttons">
+          <a href="#" class="lgbtn btn btn-sm">Aнг</a>
+          <a href="#" class="lgbtn btn btn-sm">Ру</a>
         </div>
-        <div class="test-banner-fixed">
-            <div class="scrolling-text">В настоящее время сайт работает в тестовом режиме.</div>
-        </div>
-        
+
+      </div>
     </nav>
+
+    <!-- Banner: Sayt test rejimida -->
     
-  
+  </header>
+   
 
-
-<!-- Header End -->
-</header>
 <main>
     <!--video -->
     <section class="hero-section">
@@ -95,6 +104,11 @@
                 <br>Светлое будущее начинается здесь</h1> 
         </div>
     </section>
+
+
+    <div class="test-banner-fixed">
+      <div class="scrolling-text">В настоящее время сайт работает в тестовом режиме.</div>
+    </div>
 
     <!--? Services Area Start -->
     <section class="services-section section-padding" >
@@ -643,7 +657,7 @@
 </script>
 
 <!-- JS here -->
-
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->
 <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>

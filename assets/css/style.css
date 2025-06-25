@@ -5289,17 +5289,19 @@ ul li {
     flex: 0 0 100%;
   }
 }
+
+
+/* Test banner uchun CSS */
 .test-banner-fixed {
-  background-color: #d90429; /* Qizil rang */
+  background-color: #d90429;
   color: white;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   overflow: hidden;
   position: sticky;
-  top: 60px; /* menyu balandligiga qarab, moslang */
+  top: 70px; /* Menyuning balandligiga qarab sozlang */
   z-index: 999;
-  height: 20px;
-  width: 100%;
+  height: 40px;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -5318,3 +5320,4 @@ ul li {
     transform: translateX(-100%);
   }
 }
+
