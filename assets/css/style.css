@@ -4996,6 +4996,8 @@ cursor:pointer;border:1px solid #f1f1f1}
 }
 
 .navbar{
+    display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
 
@@ -5285,5 +5287,34 @@ ul li {
 @media screen and (max-width: 500px) {
   .carousel-item {
     flex: 0 0 100%;
+  }
+}
+.test-banner-fixed {
+  background-color: #d90429; /* Qizil rang */
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  overflow: hidden;
+  position: sticky;
+  top: 60px; /* menyu balandligiga qarab, moslang */
+  z-index: 999;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
