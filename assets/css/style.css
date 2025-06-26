@@ -1351,13 +1351,13 @@ padding-bottom:100px}}
   }
  
 .language-buttons .lgbtn {
+    text-align: center;
     width: 50px;
-    height: 35px;
+    height: 25px;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 50%;
     transition: all 0.3s ease;
-    border: 2px solid #6a1d75;
     background-color: white;
     color: #6a1d75;
    
@@ -1366,6 +1366,7 @@ padding-bottom:100px}}
   .language-buttons .lgbtn:hover {
     background-color: #9221a1;
     color: white;
+    border-radius: 50%;
   }
 
 .navbar-nav .nav-link {
@@ -3729,57 +3730,67 @@ z-index:-1}
 @media (max-width: 575px)
 {.testimonial-area .founder-text p{font-size:12px}}
 
+.h1-testimonial-active .slick-dots {
+    display: none !important;
+}
 
-.h1-testimonial-active button.slick-arrow
-{position:absolute; 
-    border:0;
-    padding:10px;
-    cursor:pointer;
-    background:none;
-    -webkit-transition:.4s;
-    -moz-transition:.4s;
-    -o-transition:.4s;
-    transition:.4s;
-    right:77px;
-    margin:0 10px;
-    font-size:20px;
-    color:rgba(253,143,95,0.3);
-    bottom:0px;
-    z-index:1;
-    transform:rotate(-45deg) !important}
+/* Umumiy stil */
+.h1-testimonial-active .slick-arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #800080; /* mos ravishda logotip rangiga */
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #800080;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+/* Hover effekti */
+.h1-testimonial-active .slick-arrow:hover {
+    background-color: #800080;
+    color: #fff;
+    border-color: #800080;
+}
+
+/* Joylashuvi */
+.h1-testimonial-active .slick-prev {
+    left: -70px;
+}
+
+.h1-testimonial-active .slick-next {
+    right: 70px;
+}
+
 
     .h1-testimonial-active button.slick-arrow:hover
-    {color:#820e94}
+    {   color:#820e94}
 
     .h1-testimonial-active button.slick-next
-    {right:-10px;transform:rotate(45deg) !important}
+    {   right:-10px;
+        transform:rotate(45deg) !important}
+    .h1-testimonial-active button.slick-prev
+    {   right:-10px;
+        transform:rotate(-45deg) !important}
 
-    .h1-testimonial-active.dot-style .slick-dots
-    {bottom:5%;right:41px;position:absolute}
+    
 
-    .h1-testimonial-active.dot-style .slick-dots 
-    {display:inline-flex;
-    gap: 10px;}
-
-    .h1-testimonial-active.dot-style .slick-dots button
-    {margin-right:7px;
-        cursor:pointer;
-        background:none;
-        color:#000;
-        border:0;
-        font-size:16px;
-        padding:0
-    }
-
-    .h1-testimonial-active.dot-style .slick-active button
-    {color:#fd5f5f}
+ 
+  
+ 
 
     .slick-initialized .slick-slide{outline:0}
 
-    @media only screen and (min-width: 768px) and (max-width: 991px)
+    @media only screen and (min-width: 768px) and 
+    (max-width: 991px)
     {.footer-wrapper{padding:0}}
 
-    @media only screen and (min-width: 576px) and (max-width: 767px)
+    @media only screen and (min-width: 576px) and 
+    (max-width: 767px)
     {.footer-wrapper{padding:0}}
 
     @media (max-width: 575px)
@@ -3793,25 +3804,54 @@ z-index:-1}
         line-height:1.8;
     }
 
-    @media only screen and (min-width: 768px) and (max-width: 991px)
+    @media only screen and (min-width: 768px) and 
+    (max-width: 991px)
     {.footer-area .footer-pera p{padding-right:0px}}
 
-    @media only screen and (min-width: 576px) and (max-width: 767px)
+    @media only screen and (min-width: 576px) and 
+    (max-width: 767px)
     {.footer-area .footer-pera p{padding-right:0px}}
 
     @media (max-width: 575px)
     {.footer-area .footer-pera p{padding-right:0px}}
+
     .footer-area .footer-pera.footer-pera2 p{padding:0}
-    .footer-area .footer-tittle h4{color:#fff;font-size:24px;margin-bottom:40px;font-weight:600}
-    .footer-area .footer-tittle ul li{margin-bottom:15px}
+
+    .footer-area .footer-tittle h4
+    {color:#fff;
+        font-size:24px;
+        margin-bottom:40px;
+        font-weight:600}
+
+    .footer-area .footer-tittle ul li
+    {margin-bottom:15px}
     .footer-area .footer-tittle ul li a
-    {color:#9DA4AB;font-weight:300;font-size:16px;text-decoration:underline transparent}
+    {color:#9DA4AB;
+        font-weight:300;
+        font-size:16px;
+        text-decoration:underline transparent}
+
     .footer-area .footer-tittle ul li a:hover
-    {color:#fff;text-decoration:underline}
-    .footer-area .footer-tittle p{color:#9DA4AB;font-size:16px}
-    .footer-area .footer-form{margin-top:40px}.footer-area .footer-form form
-    {position:relative}.footer-area .footer-form form input
-    {width:100%;height:43px;padding:10px 20px;border:1px solid #9DA4AB;background:no-repeat;color:#9DA4AB;border-radius:30px}
+    {color:#fff;
+        text-decoration:underline}
+
+    .footer-area .footer-tittle p
+    {color:#9DA4AB;font-size:16px}
+
+    .footer-area .footer-form{margin-top:40px}
+
+    .footer-area .footer-form form
+    {position:relative}
+    
+    .footer-area .footer-form form input
+    {width:100%;
+        height:43px;
+        padding:10px 20px;
+        border:1px solid #9DA4AB;
+        background:no-repeat;
+        color:#9DA4AB;
+        border-radius:30px}
+
     .footer-area .footer-form form .form-icon button
     {border:0;cursor:pointer;
         padding:13px 22px;
