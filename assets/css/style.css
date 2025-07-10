@@ -5363,3 +5363,67 @@ ul li {
   }
 }
 
+/* yangi file*/
+.portfolio {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.direction {
+  width: 1000px;
+
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.direction-header {
+  padding: 10px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.projects {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
+  background-color: #fafafa;
+  padding: 0 10px;
+
+}
+.projects.open {
+  max-height: 500px; /* yetarlicha katta */
+  opacity: 1;
+}
+.projects div {
+  padding: 5px 0;
+}
+.proyekt{
+    border: 1px solid red ;
+    width:50%;
+    flex: 1
+}
+
+.pro-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 8px; /* qatorlar orasiga biroz masofa */
+}
+
+.pro-row > div:last-child {
+  flex-shrink: 0;
+}
+
+
+
+.pro-pic img {
+  margin-left: 50px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
