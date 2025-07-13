@@ -1335,7 +1335,8 @@ padding-bottom:100px}}
     
 }
 .navbar-nav .nav-link {
-      transition: all 0.1s ease;
+     font-size: 0.9rem;
+    transition: all 0.1s ease;
 
     }
 
