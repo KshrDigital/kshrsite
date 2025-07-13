@@ -16,6 +16,7 @@ body{
 .white-color{color:#fff}
 .black-color{color:#16161a}
 .theme-color{color:#FD8F5F}
+
 #430d4b
 #820e94
 
@@ -31,8 +32,8 @@ body{
 .navbar-nav {
   margin: 0 auto;
   display: flex;
-  gap: 20px;
-  
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .nav-item>a{
@@ -1349,6 +1350,9 @@ padding-bottom:100px}}
     color: #820e94 !important;
     border-bottom: 1px solid #820e94;
   }
+
+  
+
  
 .language-buttons .lgbtn {
     text-align: center;
@@ -1388,6 +1392,7 @@ padding-bottom:100px}}
     font-weight:700;
     line-height:1.4
 }
+
 
 @media only screen and (min-width: 992px) and (max-width: 1199px)
 {.section-tittle h2{font-size:36px}
@@ -5371,15 +5376,16 @@ ul li {
 
 .direction {
   width: 1000px;
-
+  background-color:#820e94;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #430d4b;
   border-radius: 5px;
 }
 
 .direction-header {
+    color: #fff;
   padding: 10px;
-  background-color: #f0f0f0;
+  background-color:rgba(130, 14, 148, 0.1) !important ;
   cursor: pointer;
   font-weight: bold;
 }
@@ -5465,7 +5471,7 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
   border-radius: 10px;
   background-position: center;
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 2s cubic-bezier(0.4, 0.2, 0.2, 1);
   backface-visibility: hidden;
   text-align: center;
   min-height: 280px;
