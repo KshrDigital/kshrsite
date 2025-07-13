@@ -96,35 +96,39 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="../assets/img/" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
+                                <section class="video-section">
+                                                                    
+                                    <h2>Videoni ko‘rganlar soni: <span id="view-count">0</span></h2>
+
+                                    <!-- YouTube iframe -->
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eb3Ixvp1uw8?si=5-uh20LX3uza62Nb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                                    <!-- YouTube API -->
+                                    <script src="https://www.youtube.com/iframe_api"></script>
+                                </section>
                             </div>
                             <div class="blog_details">
                                 <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
+                                    <h2 class="blog-head">"Арал: Магия исчезающего моря и корабли в песках"</h2>
                                 </a>
                                 <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                 he earth it first without heaven in place seed it second morning saying.</p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    
                                 </ul>
+
+                                
                             </div>
                         </article>
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="../assets/img/blog/" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>15</h3>
-                                    <p>Jan</p>
-                                </a>
+                               <iframe width="560" height="315" src="https://www.youtube.com/embed/0o9awrRx9A4?si=Tn39eA2uD4vEb5Ub" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                
                             </div>
                             <div class="blog_details">
                                 <a class="d-inline-block" href="blog_details.html">
-                                    <h2 class="blog-head">Google inks pact for new 35-storey office</h2>
+                                    <h2 class="blog-head">"Как меняется город с новой системой теплоснабжения?</h2>
                                 </a>
                                 <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                 he earth it first without heaven in place seed it second morning saying.</p>
@@ -199,6 +203,45 @@
       navbar.classList.remove('navbar-scrolled');
     }
   });
+</script>
+
+
+<script>
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+let counted = false;
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.PLAYING && !counted) {
+    counted = true;
+    incrementViewCount();
+  }
+}
+
+// Sahifa yuklanganda serverdagi hisobni yuklash
+fetch('get-views.php')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('view-count').textContent = data.count;
+  });
+
+function incrementViewCount() {
+  fetch('increment-view.php', {
+    method: 'POST'
+  })
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('view-count').textContent = data.count;
+  });
+}
 </script>
 
 
