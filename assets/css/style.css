@@ -181,7 +181,7 @@ body{
 /* Responsive */
 @media (max-width: 768px) {
   .animated-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     left: 10%;
   }
 
@@ -191,7 +191,7 @@ body{
 }
 
 @media (max-width: 480px) {
-  .animated-text {
+  .animated-text h1 {
     font-size: 1.4rem;
     left: 8%;
   }
@@ -200,11 +200,6 @@ body{
     height: 300px;
   }
 }
-
-
-
-
-
 
 .hero-section {
   position: relative;
@@ -1335,7 +1330,8 @@ padding-bottom:100px}}
     
 }
 .navbar-nav .nav-link {
-     font-size: 1.5rem;
+    
+     font-size: 1.3rem;
     transition: all 0.1s ease;
 
     }
@@ -5498,13 +5494,7 @@ h1 {
   border-radius: 10px;
 }
 
-.card-container:hover .card-front {
-  transform: rotateY(-180deg);
-}
 
-.card-container:hover .card-back {
-  transform: rotateY(0deg);
-}
 
 .card-front {
   transform: rotateY(0deg);
@@ -5574,6 +5564,35 @@ h1 {
   .card-column {
     width: 100%;
     margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .direction {
+    width: 100%;
+  }
+
+  .proyekt {
+    width: 100%;
+  }
+
+  .pro-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pro-pic img {
+    margin-left: 0;
+  }
+
+  .projects {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .direction-header {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
 
