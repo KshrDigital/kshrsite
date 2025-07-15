@@ -5443,5 +5443,24 @@ h1 {
   text-align: center;
   margin: 2rem 0;
 }
+.projectup{
+   display: flex;
+  justify-content: space-between;
+  align-items: center; 
 
-
+}
+.projectcase{
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+    width: 70%;
+}
+.projectcase p{
+     border-bottom: 2px solid #430d4b;
+    width: 100%;
+}
+.projectup img{
+    margin-right: 30px;
+    width: 80px;
+    height: 50px;
+}
