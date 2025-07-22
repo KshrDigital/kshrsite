@@ -1076,7 +1076,10 @@ line-height:50px;
 @-webkit-keyframes rotateme
 {from{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(360deg)}}
 
+.blogs-cap h5 p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
 .preloader
 {   background-color:#f7f7f7;
     width:100%;
@@ -5390,8 +5393,8 @@ ul li {
 
 
 .direction-header {
-    font-size: 18px;
-    color: #fff;
+  font-size: 18px;
+  color: #fff;
   padding: 10px;
   background-color:rgba(130, 14, 148, 0.1) !important ;
   cursor: pointer;
@@ -5399,7 +5402,7 @@ ul li {
 }
 
 .projects {
-    width: 1100px;
+  width: 1100px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
@@ -5409,16 +5412,16 @@ ul li {
 
 }
 .projects.open {
-  max-height: 1000px; /* yetarlicha katta */
+  max-height: 1000px; 
   opacity: 1;
 }
 .projects div {
   padding: 5px 0;
 }
 .proyekt{
-    border: 1px solid red ;
-    width:50%;
-    flex: 1
+  border: 1px solid red ;
+  width:50%;
+  flex: 1
 }
 
 .pro-row {
@@ -5426,7 +5429,7 @@ ul li {
   align-items: center;
   gap: 30px;
   justify-content: space-between;
-  margin-bottom: 8px; /* qatorlar orasiga biroz masofa */
+  margin-bottom: 8px; 
 }
 
 .pro-row > div:last-child {
@@ -5443,30 +5446,61 @@ ul li {
 
 h1 {
   font-size: 2.5rem;
-  font-family: 'Montserrat';
   font-weight: normal;
-  color: #444;
   text-align: center;
   margin: 2rem 0;
 }
 .projectup{
-   display: flex;
-  justify-content: space-between;
-  align-items: center; 
-
+  height: auto ;
+   
 }
 .projectcase{
-   display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-    width: 70%;
+  height: 100%;
+  width: 80%;
+    
 }
 .projectcase p{
-     border-bottom: 2px solid #430d4b;
-    width: 100%;
+  font-size: 22px;
+  width: 100%;
 }
-.projectup img{
-    margin-right: 30px;
-    width: 80px;
-    height: 50px;
+ 
+.data{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-top: 2px solid #440277;
+  
+}
+.fullmal{
+  margin: 0 auto;
+  border: 2px solid #430d4b;
+  border-radius: 10px;
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.conste{
+  width: 100%;
+}
+
+.conste p {
+  color: #430d4b;
+}
+
+.divide{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border-top: 2px solid #430d4b;
+  
+}
+.conste h4{ margin-top: 30px;
+
 }
