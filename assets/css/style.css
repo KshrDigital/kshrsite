@@ -5322,7 +5322,7 @@ ul li {
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
-  transition: background 0.3s;
+  
 }
 
 .nav-btn:hover {
@@ -5351,7 +5351,7 @@ ul li {
   font-size: 12px;
   overflow: hidden;
   position: sticky;
-  top: 70px; /* Menyuning balandligiga qarab sozlang */
+  top: 70px; 
   z-index: 999;
   height: 20px;
   width: 100%;
@@ -5374,7 +5374,7 @@ ul li {
   }
 }
 
-/* yangi file*/
+
 .portfolio {
   max-width: 1200px;
   margin: auto;
@@ -5389,8 +5389,6 @@ ul li {
   border: 2px solid #430d4b;
   border-radius: 5px;
 }
-
-
 
 .direction-header {
   font-size: 18px;
@@ -5411,13 +5409,16 @@ ul li {
   padding: 0 10px;
 
 }
+
 .projects.open {
   max-height: 1000px; 
   opacity: 1;
 }
+
 .projects div {
   padding: 5px 0;
 }
+
 .proyekt{
   border: 1px solid red ;
   width:50%;
@@ -5435,6 +5436,7 @@ ul li {
 .pro-row > div:last-child {
   flex-shrink: 0;
 }
+
 .pro-pic img {
   margin-left: 50px;
   width: 100%;
@@ -5450,10 +5452,12 @@ h1 {
   text-align: center;
   margin: 2rem 0;
 }
+
 .projectup{
   height: auto ;
    
 }
+
 .projectcase{
   display: flex;
   justify-content: space-between;
@@ -5462,6 +5466,7 @@ h1 {
   width: 80%;
     
 }
+
 .projectcase p{
   font-size: 22px;
   width: 100%;
@@ -5476,6 +5481,7 @@ h1 {
   border-top: 2px solid #440277;
   
 }
+
 .fullmal{
   margin: 0 auto;
   border: 2px solid #430d4b;
@@ -5499,8 +5505,180 @@ h1 {
   justify-content: space-between;
   align-items: center; 
   border-top: 2px solid #430d4b;
-  
+  background-color: bisque ;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
+
 .conste h4{ margin-top: 30px;
 
+}
+
+@media (max-width: 480px) {
+  .pro-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projectcase {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .direction-header {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .pro-pic img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .proyekt {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .data, .divide {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .fullmal {
+    width: 90%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .pro-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .projectcase {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .direction-header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .pro-pic img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .proyekt {
+    width: 100%;
+  }
+
+  .fullmal {
+    width: 85%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pro-row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .projectcase {
+    width: 90%;
+  }
+
+  .pro-pic img {
+    max-width: 220px;
+  }
+
+  .proyekt {
+    width: 48%;
+  }
+
+  .fullmal {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .projectcase {
+    width: 90%;
+  }
+
+  .proyekt {
+    width: 48%;
+  }
+
+  .pro-pic img {
+    max-width: 250px;
+  }
+
+  .fullmal {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .pro-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .proyekt {
+    width: 100%;
+    flex: none;
+  }
+
+  .projectcase {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .pro-pic img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fullmal {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .direction-header {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .data,
+  .divide {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
 }
