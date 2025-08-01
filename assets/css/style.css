@@ -112,6 +112,7 @@ body{
   max-width: 1550px;
   height: 600px;
   margin: 0 auto;
+  background-image: url("/assets/img/busimg.jpg");
   background-size: cover;
   background-position: center;
   transition: background-image 1s ease-in-out;
@@ -119,13 +120,10 @@ body{
 }
 
 /* Gradient overlay */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+.fontd{
+    width: 100%;
+    height: 100%;
+    background-color: #000000a7;
 }
 
 .footerbg{
@@ -139,7 +137,11 @@ body{
 }
 
 /* One-time animated text */
-
+.trafaret{
+    font-size: 42px; color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style: italic;
+}
 
 /* Animated text */
 .animated-text {
@@ -1393,8 +1395,7 @@ padding-bottom:100px}}
     color:#820e94 !important;
     font-weight:700;
     line: height 1.4em;
-    border-left: 2px solid #820e94;
-    border-right: 2px solid #820e94;
+   
 }
 .section-title{
     width: 100%;
@@ -5196,6 +5197,7 @@ button:hover {
     }
 
     .katalog {
+      
       background-color: #fff;
       border-radius: 10px;
       padding: 20px;
@@ -5681,4 +5683,7 @@ h1 {
   h1 {
     font-size: 1.6rem;
   }
+}
+.divide button{
+    margin-right: 50px;
 }
