@@ -5514,7 +5514,7 @@ h1 {
   justify-content: space-between;
   align-items: center; 
   border: 2px solid #430d4b;
-  background-color: #d8db27 ;
+  background-color: #e88ef6 ;
   margin-bottom: 20px;
   border-radius: 10px;
 }
@@ -5532,6 +5532,7 @@ h1 {
   .projectcase {
     flex-direction: column;
     width: 100%;
+
   }
 
   .direction-header {
