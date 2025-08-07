@@ -105,6 +105,13 @@ body{
     cursor: pointer;
 }
 
+.firstbgimg{
+    background-color: #000a2dab;
+ background-image: url("/assets/img/post/");
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
+}
 
 .hero-section {
   position: relative;
@@ -5687,3 +5694,7 @@ h1 {
 .divide button{
     margin-right: 50px;
 }
+
+
+
+

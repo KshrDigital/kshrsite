@@ -24,6 +24,122 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+    @font-face {
+      font-family: "Grotesque";
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.woff");
+    }
+
+    @font-face {
+      font-family: "Grotesque Black";
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.woff");
+    }
+
+   
+   .manbody{
+    width: 100%;
+    
+    margin: 0;
+ padding-top: 50px;
+   }
+    
+
+    .card-custom {
+      width: 100%;
+      max-width: 350px;
+      height: 350px;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+
+    .card-custom .thumb {
+      height: 260px;
+      background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png") no-repeat center;
+      background-size: cover;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .card-custom .infos {
+      position: relative;
+      background: #fff;
+      height: 350px;
+      padding: 14px 24px;
+      transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+    }
+
+    .infos .title {
+      margin: 10px 0;
+      letter-spacing: 3px;
+      color: #152536;
+      font-weight: bold;
+      font-family: "Grotesque Black", sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .infos .flag {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      width: 35px;
+      height: 23px;
+      background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/flag.png") no-repeat top right;
+      background-size: 100% auto;
+    }
+
+    .infos .date,
+    .infos .seats {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: rgba(21, 37, 54, 0.7);
+    }
+
+    .infos .seats {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .infos .txt {
+      line-height: 2;
+      font-size: 1.3rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: rgba(21, 37, 54, 0.7);
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .infos .details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 10px 0;
+      padding: 20px 24px;
+      letter-spacing: 1px;
+      color: #4e958b;
+      font-family: "Grotesque Black", sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .card-custom:hover .infos {
+      transform: translateY(-260px);
+    }
+
+    .card-custom:hover .seats,
+    .card-custom:hover .txt,
+    .card-custom:hover .details {
+      opacity: 1;
+    }
+    </style>
+    
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -77,286 +193,262 @@
     <div class="row justify-content-center">
                     <div class="col-xl-10 col-lg-10 col-md-12">
                         <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-20 mt-30">
+                        <div class="section-tittle text-center mb-20 mt-30 " >
                             <span>Наш сервис</span>                           
                         </div> 
                     </div>
     </div>
 
-    <!--? Services Area Start -->
-    <section class="services-section section-padding fix">
-        <div class="container">
+<div class="container" style="">
+    <div class="row g-4 justify-content-center">
+
+      <!-- CARD 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/consulting1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Консалтинг по развитию предприятий </h2>
+              <h3 class="seats"></h3>
+            <p class="txt">Оказание консалтинговых услуг по развитию и оценке предприятий различных отраслей экономики</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/consulting1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Проведение социологических исследований </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Услуги социологических исследований</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('');"></div>
+          <div class="infos">
+            <h2 class="title">Анализ исследований переселения </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Проведение исследований по вопросам, связанным с переездом</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/training.png');"></div>
+          <div class="infos">
+            <h2 class="title">Разработка модульного обучения </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Разработка модульных учебных программ и учебно-методических материалов по экономической тематике</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/confres.jpeg');"></div>
+          <div class="infos">
+            <h2 class="title">Услуги по планированию конференций</h2>
             
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/consulting1.jpg" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#"> Консалтинг по развитию предприятий</a></h3>
-                                <p>Оказание консалтинговых услуг по развитию и оценке предприятий различных отраслей экономики</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/gallery/" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Проведение социологических исследований</a></h3>
-                                <p><br>Услуги социологических исследований</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/gallery/" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Анализ исследований переселения</a></h3>
-                                <p>Проведение исследований по вопросам, связанным с переездом</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/training.png" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Разработка модульного обучения</a></h3>
-                                <p>Разработка модульных учебных программ и учебно-методических материалов по экономической тематике</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/confres.jpeg" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Услуги по планированию конференций</a></h3>
-                                <p>Организация и проведение региональных, национальных и международных конференций</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/studytour.jpg" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Управление образовательным туром</a></h3>
-                                <p>Организация и проведение национальных и международных образовательных туров</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/agro.webp" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Агро-водные решения</a></h3>
-                                <p>Реализация сельскохозяйственных и водосберегающих инициатив</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/legal.jpg" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Улучшение правовой базы</a></h3>
-                                <p>Содействие совершенствованию и развитию правовых рамок</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-services single-services2 mb-30 section-over1 text-center">
-                        <div class="services-img">
-                            <img src="assets/img/serviceimg/itserv.jpg" alt="">
-                            <div class="services-caption">
-                                <h3><a href="#">Профессиональные ИТ-услуги</a></h3>
-                                <p>Комплексные ИТ-решения, обеспечивающие безопасность, поддержку и внедрение инноваций.</p>
-                                <a href="#" class="btn btn3">Подробно</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="seats"></h3>
+            <p class="txt">Организация и проведение региональных, национальных и международных конференций</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
 
-            </div>
-              <div class="row justify-content-center">
+      
+      <!-- CARD 6 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/studytour.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Управление образовательным туром </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Организация и проведение национальных и международных образовательных туров</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+     
+      <!-- CARD 7 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/agro.webp');"></div>
+          <div class="infos">
+            <h2 class="title">Агро-водные решения</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Реализация сельскохозяйственных и водосберегающих инициатив</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+  
+      <!-- CARD 8 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/legal.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Улучшение правовой базы</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Содействие совершенствованию и развитию правовых рамок.</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      
+      <!-- CARD 9 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/itserv.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Профессиональные ИТ-услуги </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Комплексные ИТ-решения, обеспечивающие безопасность, поддержку и внедрение инноваций.</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <div class="row justify-content-center">
                   <div class="row justify-content-center">
                       <div class="col-xl-10 col-lg-10 col-md-12 mt-30">
-                          <h2 style="color: #791788; width: 900px; font-size: 30px; font-weight: bold;margin-left: 170px;">Специализированные исследования и юридическая поддержка</h2>   
+                          <h2 style="color: #791788; width: 900px; font-size: 20px; font-weight: bold;">Специализированные исследования и юридическая поддержка</h2>   
                         
                       </div>
                   </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/gender.jpg" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Социальные гендерные исследования</a></h3>
-                                  <p>Проведение социальных опросов и гендерных исследований</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/operat.webp" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Оценка институциональных проблем</a></h3>
-                                  <p>Анализ правовых, финансовых, технических, административных аспектов деятельности фермерских хозяйств и общественных организаций.</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/lega.png" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Юридическая поддержка при составлении документов</a></h3>
-                                  <p>Проведение экспертиз и разработка нормативно-правовых документов</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/agros.jpg" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Реформа регулирования сельского хозяйства</a></h3>
-                                  <p>Разработка предложений и рекомендаций по совершенствованию законодательства в аграрном секторе</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/soil.jpeg" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Исследования по восстановлению почвы</a></h3>
-                                  <p>Проведение научно-практических работ на проектных территориях, подверженных засолению и деградации земель</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row justify-content-center">
-                  <div class="row justify-content-center">
-                      <div class="col-xl-10 col-lg-10 col-md-12 mt-30">
-                          <h2 style="color: #791788; width: 900px; font-size: 30px; font-weight: bold;margin-bottom: 20px;">Информационные услуги и распространение передового опыта </h2>   
-                        
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/engage.jpg" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Проекты по взаимодействию со СМИ</a></h3>
-                                  <p>Реализация совместных медиапроектов для освещения проблем и передового опыта в различных секторах экономики</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/serviceimg/study.jpg" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Туры по обмену опытом</a></h3>
-                                  <p>Организация ознакомительных поездок (визитов на основе сценария) для изучения и обмена передовым местным и международным опытом</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6">
-                      <div class="single-services single-services2 mb-30 section-over1 text-center">
-                          <div class="services-img">
-                              <img src="assets/img/gallery/" alt="">
-                              <div class="services-caption">
-                                  <h3><a href="#">Подготовка информационного материала</a></h3>
-                                  <p>Подготовка информационно-методических материалов</p>
-                                  <a href="#" class="btn btn3">Подробно</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
         </div>
-    </section>
-    <!--Services Area End -->
+
+      <!-- CARD 10 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/gender.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Социальные гендерные исследования </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Проведение социальных опросов и гендерных исследований</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      
+      <!-- CARD 11 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/operat.webp');"></div>
+          <div class="infos">
+            <h2 class="title">Оценка институциональных проблем </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Анализ правовых, финансовых, технических, административных аспектов деятельности фермерских хозяйств и общественных организаций.</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 12 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/lega.png');"></div>
+          <div class="infos">
+            <h2 class="title">Юридическая поддержка при составлении документов </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Проведение экспертиз и разработка нормативно-правовых документов</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
         
+      <!-- CARD 13 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/agros.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Реформа регулирования сельского хозяйства</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Разработка предложений и рекомендаций по совершенствованию законодательства в аграрном секторе</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
 
-<!-- Modal oynasi -->
+     <div class="row justify-content-center">
+                  <div class="row justify-content-center">
+                      <div class="col-xl-10 col-lg-10 col-md-12 mt-30">
+                          <h2 style="color: #791788; width: 900px; font-size: 20px; font-weight: bold;margin-bottom: 20px;">Информационные услуги и распространение передового опыта </h2>   
+                        
+                      </div>
+                  </div>
+            </div>
+      <!-- CARD 14 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30  mb-50 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/soil.jpeg');"></div>
+          <div class="infos">
+            <h2 class="title">Исследования по восстановлению почвы </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Проведение научно-практических работ на проектных территориях, подверженных засолению и деградации земель</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 15 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30  mb-50 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/study.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Туры по обмену опытом</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Организация ознакомительных поездок (визитов на основе сценария) для изучения и обмена передовым местным и международным опытом</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+         <!-- CARD 15 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 mb-50 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/new-york-city.png');"></div>
+          <div class="infos">
+            <h2 class="title">Подготовка информационного материала</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Подготовка информационно-методических материалов</p>
+            <h3 class="details">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
     
-
+    <!--Services Area End -->
+    
+  
  
 
-  <script>
-    function openModal(btn) {
-      const book = btn.closest('.book');
-      const title = book.dataset.title;
-      const content = book.dataset.content;
+   
 
-      document.getElementById('modalTitle').innerText = title;
-      document.getElementById('modalContent').innerText = content;
-      document.getElementById('myModal').style.display = 'flex';
-    }
 
-    function closeModal() {
-      document.getElementById('myModal').style.display = 'none';
-    }
-  </script>
-    <!--? Services Area Start -->
-    <section class="services-section section-padding fix">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-lg-10 col-md-12">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle text-center mb-70">
-                            
-                            
-                        </div> 
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-    </section>
-    <!--Services Area End -->
+   
 
 </main>
     
