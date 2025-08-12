@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../assets/css/slick.css">
     <link rel="stylesheet" href="../assets/css/nice-select.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -84,14 +85,7 @@
 	place-items: center;
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(
-		to right,
-		#430d4b82,
-		#77138653,
-		#c949dd81,
-		#7713866e,
-		#430d4b66
-	);
+	
 	font-family: "Martel Sans", sans-serif;
 }
 
@@ -108,10 +102,9 @@ p {
 }
 .wrap {
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
+	
 	width: 70vmin;
-	height: 58vmin;
+	height: 67vmin;
 	margin: 1rem auto;
 	border: 8px solid;
 	border-image: linear-gradient(
@@ -135,10 +128,13 @@ p {
 	top: 0;
 	right: 0;
 	width: 70vmin;
-	height: 48vmin;
-    background-image: url(./assets/img/experts/kalash.jpg);
-    background-size: cover;
+	height: 70%;
     transition: 0.3s ease-in-out;
+}
+.img-content{
+    width: 100%;
+    background-image: url("./assets/img/experts/kalash.jpg");
+    background-size: cover; 
 }
 .inset {
 	max-width: 50%;
@@ -151,7 +147,6 @@ p {
 	bottom: 1rem;
 	right: 2rem;
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
 	width: 58vmin;
 	height: 3vmin;
@@ -173,96 +168,41 @@ p {
 	place-self: center;
 	width: calc(50px + 2vw);
 }
-.wrap:hover .overlay {
+/*
+.wrap.active .overlay {
 	transform: translateX(-60vmin);
 }
-.wrap:hover .image-content {
+.wrap.active .image-content {
 	width: 30vmin;
 }
-.wrap:hover .overlay-content {
+.wrap.active .overlay-content {
 	border: none;
 	transition-delay: 0.2s;
 	transform: translateX(60vmin);
 }
-.wrap:hover .dots {
+.wrap.active .dots {
 	transform: translateX(1rem);
 }
-.wrap:hover .dots .dot {
+.wrap.active .dots .dot {
 	background: white;
-}
+}*/
+
 .sour{
     text-align: center;
    
     width: 100%;
     height: auto;
-    border-bottom:2px solid #761386 ;
-    border-top:2px solid #761386 ;
+    border-radius: 15px;
+    border:2px solid #761386 ;
     margin-bottom: 10px;
 }
-/* Animations and timing delays */
-.animate {
-	animation-duration: 0.7s;
-	animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-	animation-fill-mode: backwards;
-}
+
 /* Pop In */
 .pop {
 	animation-name: pop;
 }
-@keyframes pop {
-	0% {
-		opacity: 0;
-		transform: scale(0.5, 0.5);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1, 1);
-	}
-}
 
 /* Slide In */
-.slide {
-	animation-name: slide;
-}
-@keyframes slide {
-	0% {
-		opacity: 0;
-		transform: translate(4em, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: translate(0, 0);
-	}
-}
-
-/* Slide Left */
-.slide-left {
-	animation-name: slide-left;
-}
-@keyframes slide-left {
-	0% {
-		opacity: 0;
-		transform: translate(-40px, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: translate(0, 0);
-	}
-}
-
-.slide-up {
-	animation-name: slide-up;
-}
-@keyframes slide-up {
-	0% {
-		opacity: 0;
-		transform: translateY(3em);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
 
 .delay-1 {
 	animation-delay: 0.3s;
@@ -303,7 +243,8 @@ p {
 .sour a{
    font-weight: bold;
     margin-bottom: 20px;
-    color: #761386;
+    background-color: #430d4b;
+    color: #f1eff2;
 }
 .sour:hover a{
     border-bottom: 2px solid #430d4b;
@@ -315,23 +256,76 @@ p {
 .dots h2{
     font-size: 15px;
 }
+
+.chess{
+    min-height: 70vh;
+	display: flex;
+	place-items: center;
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Martel Sans", sans-serif;
+
+}
+.piyoda{
+    text-align: center;
+    width: 25%;
+    border: 4px solid #430d4b;
+    height: 60vmin;
+    margin: 1rem auto;
+}
+.piyoda h4{
+    margin-top: 20px;
+    color: #430d4b;
+    font-weight: bold;
+}
 </style>
 <main>
 
+    <section class="chess">
+         <div class="piyoda">
+            <img src="./assets/img/gallery/social1.jpg" style="width: 100%;" alt="">
+            <h4> Управление жилищным фондом и развитие ТЧСЖ</h4>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Open Modal 1</button>
+
+         </div>
+         <div class="piyoda"></div>
+         <div class="piyoda"></div>
+    </section>
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-3">
+            <div class="modal-header">
+            <h5 class="modal-title">Modal 1 - Cards</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 1</h5><p class="card-text">Some quick example text.</p></div></div></div>
+                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 2</h5><p class="card-text">Some quick example text.</p></div></div></div>
+                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 3</h5><p class="card-text">Some quick example text.</p></div></div></div>
+                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 4</h5><p class="card-text">Some quick example text.</p></div></div></div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
     <section class="chesscard">
         <div class="wrap animate pop" >
             <div class="overlay">
-                  <div class="dots animate">
+                
+                <div class="image-content" >
+                </div>
+               <div class="">
                     <h2><strong> Развития моделей управления и эксплуатация жилищным фондом. Внедрение энергосбережения в жилищном фонде.</strong></h2>
+                    
                 </div>
-                <div class="image-content animate slide delay-5" >
-                 
-                </div>
-              
             </div>
+            
             <div class="text">
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p ><strong> Проект: Развитие товариществ собственников жилья и управляющих организаций жилищного фонда</strong> </p>
                     <h4 > Период: 2008-2010</h4>
                     <h4 > Заказчик: Институт экономики города</h4>
@@ -339,20 +333,15 @@ p {
                 </div>
             
                 <div class="sour">
-                      <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
-                    <p ><strong> Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</strong> </p>
+                    <p style="font-size: 12px;"><strong> Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</strong> </p>
                    <h4>Период: 2017-2019</h4>
                     <h4>Заказчик: Инициатива "Жилищное <br>хозяйство в Восточной Европе" (IWO)</h4>
                     <a href="./project_pages/prohouse.html" >Подробный</a>
                 </div>
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Promhouse - Профессионализация управления жилищным фондом в Казахстане и Узбекистане</strong></p>
-                    
-                        <h4>Период: 2020-2023</h4>
-                        <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
-                                                
-                  
+                    <h4>Период: 2020-2023</h4>
+                    <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
                     <a href="/project_pages/prohouse2.html" >Подробный</a>
                 </div>
             </div>
@@ -368,7 +357,6 @@ p {
             </div>
             <div class="text">
                <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: «Водоснабжение и санитария Сурхандарьинской области» </strong></p>
                     <h4>Период: 2012 – 2014 </h4>
                     <h4>Азиатский Банк Развития </h4>
@@ -376,7 +364,6 @@ p {
                 </div>
             
                 <div class="sour">
-                      <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан </strong></p>
                     <h4> Период: 2016 – 2017</h4>
                     <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
@@ -385,7 +372,6 @@ p {
                     <a href="./project_pages/sriwater.html" >Подробный</a>
                 </div>
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p> <strong>Проект «Улучшение водоснабжения в Акалтынском, Баяутском, Хавастском, Мирзаабадском и Сардобинском районах Сырдарьинской области», Узбекистан.
                         Услуги по повышению квалификации персонала Государственного унитарного предприятия«Сувокова» Сырдарьинской области </strong></p>
                     <h4>Период: 2017 – 2018 </h4>
@@ -406,7 +392,6 @@ p {
             </div>
             <div class="text">
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств на засушливых территориях Узбекистана» в района: Чимбай и Кегейли</strong></p>
                                             
                     <h4>Период: 2016 – 2019</h4>
@@ -415,7 +400,6 @@ p {
                     <a href="./project_pages/adobt1.html" >Подробный</a>                          
                 </div>
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong>Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств в засушливых районах Узбекистана» в районах: Кегейли, Канликул, Чимбай, Тахтакупырский, Муйнакский.</strong> </p>
                     <h4>Период: 2017 – 2017</h4>
                     <h4>Заказчик: ПРООН Узбекистан</h4>
@@ -426,7 +410,7 @@ p {
         </div>
         
     </section>
-    <section class="chesscard">
+     <section class="chesscard">
         <div class="wrap animate pop" >
             <div class="overlay">
                 <div class="image-content2 animate slide delay-5">
@@ -438,14 +422,12 @@ p {
             </div>
             <div class="text">
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Разработка и внедрение механизма информированного общественного мониторинга и диалога, проект «Реконструкция системы централизованного теплоснабжения и повышения энергоэффективности в гг. Андижан, Чирчик, Бухара, Самарканд и Ташкент (ТЦ-8)»</strong></p>      
                     <h4>Период: 2020 – 2023</h4>
                     <h4>Заказчик: Всемирный Банк</h4>
                     <a href="./project_pages/mexanizatsiya.html">Подробный</a>
                 </div>
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p> <strong> Проект: Консультационные услуги по проведению социального опроса среди населения касательно модернизации внутриквартирных систем теплоснабжения, проект «Реконструкция системы централизованного теплоснабжения и повышения энергоэффективности в гг. Андижан, Чирчик, Бухара, Самарканд и Ташкент (ТЦ-8)»</strong></p>
                                    
                     <h4>Период: 2024</h4>
@@ -455,7 +437,6 @@ p {
                                       
                 </div>
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Консультационные услуги по проведению информационно-разъяснительной работы среди населения для содействия во внедрении централизованной системы теплоснабжения и горячего водоснабжения. </strong></p>
                     <h4>Период: 2024 – 2025</h4>
                     <h4>Заказчик: Всемирный Банк</h4>
@@ -473,7 +454,6 @@ p {
             </div>
             <div class="text">
                 <div class="sour">
-                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
                     <p><strong> Проект: Образовательные услуги по наращиванию потенциала сотрудников АКИБ «Ипотека Банк»: </strong></p>
                     <h3>Эффективное управление кадрами и практическое формирование кадрового резерва </h3>
                     <h3>Корпоративные тренинги на сплочение сотрудников</h3> 
@@ -1146,6 +1126,15 @@ p {
 </script>
 
 <script>
+document.querySelectorAll('.wrap').forEach(function(item) {
+    item.addEventListener('click', function() {
+        this.classList.toggle('active'); 
+    });
+});
+</script>
+
+
+<script>
 
 document.querySelectorAll('.direction-header').forEach(header => {
   header.addEventListener('click', () => {
@@ -1162,6 +1151,35 @@ document.querySelectorAll('.direction-header').forEach(header => {
     currentProjects.classList.toggle('open');
   });
 });
+</script>
+ 
+<script>
+  let currentPage = 1;
+  const totalPages = document.querySelectorAll('.page').length;
+
+  function showPage(page) {
+    document.querySelectorAll('.page').forEach((el, idx) => {
+      el.classList.toggle('d-none', idx !== page - 1);
+    });
+  }
+
+  document.querySelectorAll('.next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+  });
+
+  document.querySelectorAll('.prev').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+  });
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
