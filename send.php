@@ -1,13 +1,23 @@
 <?php
 $token = "8442875596:AAGGfponmrlAYQqDP64VQa7R_qUCR5TFgM0";
-$chat_id = "7551009599"; // chat_id ni /getUpdates orqali topasiz
+$chat_id = "7551009599";
 
 $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
+$msg = $_POST['message'] ?? '';
 
-$message = "📩 Yangi kontakt ma'lumoti:\n👤 Ism: $name\n📧 Email: $email";
+$message = "📩 Yangi kontakt ma'lumoti:\n👤 Ism: $name\n📧 Email: $email\n💬 Xabar: $msg";
 
-file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=" . urlencode($message));
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://api.telegram.org/bot$token/sendMessage");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, [
+    'chat_id' => $chat_id,
+    'text' => $message
+]);
+$response = curl_exec($ch);
+curl_close($ch);
 
-echo "Message sent successfully!";
+echo "Xabar yuborildi!";
 ?>
