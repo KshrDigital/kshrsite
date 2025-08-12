@@ -111,6 +111,8 @@ body{
   max-width: 1550px;
   height: 600px;
   margin: 0 auto;
+  background-image: url("../img/experts/kalash.jpg");
+  background-size: cover;
   background-position: center;
   transition: background-image 1s ease-in-out;
   overflow: hidden;
