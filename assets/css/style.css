@@ -3510,6 +3510,10 @@ F
 
 .services-section .single-services
 {margin:0 15px}
+@media only screen and (min-width: 575px)and (max-width: 767px){
+    .single-services{width: 100%}
+    
+}
 
 .services-section .single-services.single-services2
 {margin:0 inherit;margin-bottom:30px}
