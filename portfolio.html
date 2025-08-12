@@ -73,14 +73,14 @@
 <!-- Header End -->
 </header>
 <main>
-    <style>
-            * {
+<style>
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 .chesscard {
-	min-height: 100vh;
+	min-height: 70vh;
 	display: flex;
 	place-items: center;
 	margin: 0;
@@ -107,20 +107,16 @@ p {
 	color: #430d4b;
 	margin-bottom: 1.5rem;
 }
-
 .wrap {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	width: 78vmin;
+	width: 70vmin;
 	height: 58vmin;
 	margin: 1rem auto;
 	border: 8px solid;
 	border-image: linear-gradient(
-			-50deg,
-		#761386
-		)
-		1;
+			-50deg,#761386	)1;
 	transition: 0.3s ease-in-out;
 	position: relative;
 	overflow: hidden;
@@ -131,26 +127,8 @@ p {
 	width: 100%;
 	height: 100%;
 	padding: 1rem 0.75rem;
-	background: #186218;
+	background: #fff;
 	transition: 0.4s ease-in-out;
-	z-index: 1;
-}
-.overlay-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 8vmin;
-	height: 100%;
-	padding: 0.5rem 0 0 0.5rem;
-	border: 3px solid;
-	border-image: linear-gradient(
-			to bottom,
-			#aea724 5%,
-			forestgreen 35% 65%,
-			#aea724 95%
-		)
-		0 0 0 100%;
-	transition: 0.3s ease-in-out 0.2s;
 	z-index: 1;
 }
 .image-content {
@@ -158,41 +136,27 @@ p {
 	top: 0;
 	right: 0;
 	width: 75vmin;
-	height: 100%;
-	background-image: url("./assets/img/gallery/social1.jpg");
-	background-size: cover;
-	transition: 0.3s ease-in-out;
-	/* border: 1px solid green; */
+	height: 45vmin;
+    background-image: url(./assets/img/gallery/social1.jpg);
+    transition: 0.3s ease-in-out;
 }
-
 .inset {
 	max-width: 50%;
 	margin: 0.25em 1em 1em 0;
 	border-radius: 0.25em;
 	float: left;
 }
-
 .dots {
 	position: absolute;
 	bottom: 1rem;
 	right: 2rem;
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	width: 50px;
+	width: 60vmin;
 	height: 3vmin;
 	transition: 0.3s ease-in-out 0.3s;
 }
-.dot {
-	width: 1rem;
-	height: 1rem;
-	background: yellow;
-	border: 1px solid indigo;
-	border-radius: 50%;
-	transition: 0.3s ease-in-out 0.3s;
-}
-
 .text {
 	display: grid;
 	position: absolute;
@@ -209,7 +173,6 @@ p {
 	place-self: center;
 	width: calc(50px + 2vw);
 }
-
 .wrap:hover .overlay {
 	transform: translateX(-60vmin);
 }
@@ -227,7 +190,12 @@ p {
 .wrap:hover .dots .dot {
 	background: white;
 }
-
+.sour{
+    width: 100%;
+    height: auto;
+    border:2px solid #761386 ;
+    margin-bottom: 10px;
+}
 /* Animations and timing delays */
 .animate {
 	animation-duration: 0.7s;
@@ -317,55 +285,287 @@ p {
 .delay-8 {
 	animation-delay: 2.4s;
 }
+.sour p {
+    font-size: 14px; font-style: italic;
+}
+.sour h4{
+    font-size: 12px;
+}
+.sour h3{
+    font-size: 15px;
+}
+.sour a{
+   font-weight: bold;
+    
+    color: #761386;
+}
+</style>
 
-    </style>
     <section class=" chesscard">
-        
-    <div class="wrap animate pop" >
-        <div class="overlay">
-            <div class="overlay-content animate slide-left delay-2">
-                <h1 class="animate slide-left pop delay-4">Trees</h1>
-                <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Kingdom: <em>Plantae</em></p>
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                  <div class="dots animate">
+                    <h2><strong>1. Управление жилищным фондом и развитие ТЧСЖ</strong></h2>
+                </div>
+                <div class="image-content animate slide delay-5">
+                 
+                </div>
+              
             </div>
-            <div class="image-content animate slide delay-5"></div>
-            <div class="dots animate">
-                <div class="dot animate slide-up delay-6"></div>
-                <div class="dot animate slide-up delay-7"></div>
-                <div class="dot animate slide-up delay-8"></div>
+            <div class="text">
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p ><strong> Проект: Развитие товариществ собственников жилья и управляющих организаций жилищного фонда</strong> </p>
+                    <h4 > Период: 2008-2010</h4>
+                    <h4 > Заказчик: Институт экономики города</h4>
+                    <a href="./project_pages/tchcj.html" >Подробный</a>
+                </div>
+            
+                <div class="sour">
+                      <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p ><strong> Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</strong> </p>
+                   <h4>Период: 2017-2019</h4>
+                    <h4>Заказчик: Инициатива "Жилищное <br>хозяйство в Восточной Европе" (IWO)</h4>
+                    <a href="./project_pages/prohouse.html" >Подробный</a>
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Promhouse - Профессионализация управления жилищным фондом в Казахстане и Узбекистане</strong></p>
+                    
+                        <h4>Период: 2020-2023</h4>
+                        <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
+                                                
+                  
+                    <a href="/project_pages/prohouse2.html" >Подробный</a>
+                </div>
             </div>
         </div>
-        <div class="text">
-            <p><img class="inset" src="https://assets.codepen.io/4787486/oak_1.jpg" alt="" />Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.</p>
-            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.</p>
-            <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
-            <img class="tree" src="https://assets.codepen.io/4787486/tree+clipart.jpeg" alt="" />
-        </div>
-    </div>
-       
-    <div class="wrap animate pop" style="width: ;">
-        <div class="overlay">
-            <div class="overlay-content animate slide-left delay-2">
-                <h1 class="animate slide-left pop delay-4">Trees</h1>
-                <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Kingdom: <em>Plantae</em></p>
-            </div>
-            <div class="image-content animate slide delay-5"></div>
-            <div class="dots animate">
-                <div class="dot animate slide-up delay-6"></div>
-                <div class="dot animate slide-up delay-7"></div>
-                <div class="dot animate slide-up delay-8"></div>
-            </div>
-        </div>
-        <div class="text">
-            <p><img class="inset" src="https://assets.codepen.io/4787486/oak_1.jpg" alt="" />Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.</p>
-            <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.</p>
-            <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
-            <img class="tree" src="https://assets.codepen.io/4787486/tree+clipart.jpeg" alt="" />
-        </div>
-    </div>
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                <div class="image-content1 animate slide delay-5">
 
+                </div>
+                <div class="dots animate">
+                <h2>2. Водоснабжение и санитария</h2>    
+                </div>
+            </div>
+            <div class="text">
+               <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: «Водоснабжение и санитария Сурхандарьинской области» </strong></p>
+                    <h4>Период: 2012 – 2014 </h4>
+                    <h4>Азиатский Банк Развития </h4>
+                    <a href="./project_pages/waterand.html" >Подробный</a>
+                </div>
+            
+                <div class="sour">
+                      <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан </strong></p>
+                    <h4> Период: 2016 – 2017</h4>
+                    <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
+                                          
+                                               
+                    <a href="./project_pages/sriwater.html" >Подробный</a>
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p> <strong>Проект «Улучшение водоснабжения в Акалтынском, Баяутском, Хавастском, Мирзаабадском и Сардобинском районах Сырдарьинской области», Узбекистан.
+                        Услуги по повышению квалификации персонала Государственного унитарного предприятия«Сувокова» Сырдарьинской области </strong></p>
+                    <h4>Период: 2017 – 2018 </h4>
+                    <h4> Всемирный Банк</h4>
+                           
+                    <a href="./project_pages/usluga.html" >Подробный</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                <div class="image-content12 animate slide delay-5">
 
+                </div>
+                <div class="dots animate">
+                <h2>3. Климатическая устойчивость и сельское хозяйство</h2>    
+                </div>
+            </div>
+            <div class="text">
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств на засушливых территориях Узбекистана» в района: Чимбай и Кегейли</strong></p>
+                                            
+                    <h4>Период: 2016 – 2019</h4>
+                    <h4>Заказчик: ПРООН Узбекистан</h4>
+                                
+                    <a href="./project_pages/adobt1.html" >Подробный</a>                          
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong>Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств в засушливых районах Узбекистана» в районах: Кегейли, Канликул, Чимбай, Тахтакупырский, Муйнакский.</strong> </p>
+                    <h4>Период: 2017 – 2017</h4>
+                    <h4>Заказчик: ПРООН Узбекистан</h4>
+                    <a href="./project_pages/adobt2.html">Подробный</a>
+                
+                </div>
+            </div>
+        </div>
     </section>
-       
+     <section class=" chesscard">
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                <div class="image-content2 animate slide delay-5">
+
+                </div>
+                <div class="dots animate">
+                    <h2>4. Централизованное теплоснабжение и энергоэффективность</h2>
+                </div>
+            </div>
+            <div class="text">
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Разработка и внедрение механизма информированного общественного мониторинга и диалога, проект «Реконструкция системы централизованного теплоснабжения и повышения энергоэффективности в гг. Андижан, Чирчик, Бухара, Самарканд и Ташкент (ТЦ-8)»</strong></p>      
+                    <h4>Период: 2020 – 2023</h4>
+                    <h4>Заказчик: Всемирный Банк</h4>
+                    <a href="./project_pages/mexanizatsiya.html">Подробный</a>
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p> <strong> Проект: Консультационные услуги по проведению социального опроса среди населения касательно модернизации внутриквартирных систем теплоснабжения, проект «Реконструкция системы централизованного теплоснабжения и повышения энергоэффективности в гг. Андижан, Чирчик, Бухара, Самарканд и Ташкент (ТЦ-8)»</strong></p>
+                                   
+                    <h4>Период: 2024</h4>
+                    <h4>Заказчик: Всемирный Банк</h4>
+                    <a href="./project_pages/consultat.html">Подробный</a>
+                                    
+                                      
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Консультационные услуги по проведению информационно-разъяснительной работы среди населения для содействия во внедрении централизованной системы теплоснабжения и горячего водоснабжения. </strong></p>
+                    <h4>Период: 2024 – 2025</h4>
+                    <h4>Заказчик: Всемирный Банк</h4>
+                    <a href="./project_pages/consultat2.html">Подробный</a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                <div class="image-content3 animate slide delay-5">
+                </div>
+                <div class="dots animate">
+                    <h2>5. Повышение квалификации и развитие кадрового потенциала</h2>    
+                </div>
+            </div>
+            <div class="text">
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Образовательные услуги по наращиванию потенциала сотрудников АКИБ «Ипотека Банк»: </strong></p>
+                    <h3>Эффективное управление кадрами и практическое формирование кадрового резерва </h3>
+                    <h3>Корпоративные тренинги на сплочение сотрудников</h3> 
+                    <h4>Период: 2020</h4>
+                    <h4>Заказчик: Министерство транспорта <br>Республики Узбекистан</h4>
+                    <a href="./project_pages/stydytour.html">Подробный</a>
+                                
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p> <strong> Проект: Услуги по повышению квалификации персонала, проект «Реконструкция системы централизованного теплоснабжения и повышения энергоэффективности в гг. Андижан, Чирчик, Бухара, Самарканд и Ташкент (ТЦ-8)» </strong></p>
+                                            
+                    <h4>Период: 2020 – 2022 </h4>
+                    <h4>Заказчик: Всемирный Банк</h4>
+                    <a href="./project_pages/uslug2.html">Подробный</a>
+                </div>
+                <div class="sour">
+                    <img src="./assets/img/busimg.jpg" style="width: 30vmin; height: 20vmin;" alt="">
+                    <p><strong> Проект: Образовательные услуги по наращиванию потенциала специалистов охраны труда и техника безопасности </strong></p>
+                    <h3>Межрегиональный семинар по охране труда и теники безопасности для управляющих компаний г. Хива</h3>
+                    <h3>Межрегиональный семинар по вопросам сбора и переработки твёрдых бытовых отходов для управляющих компаний</h3>
+                    <h4>Период: 2020 – 2022</h4>
+                    <h4>Заказчик: Иностранное предприятия <br>“Veolia Energy Tashkent”</h4>
+                    <a href="#">Info</a>
+                </div>
+                <div class="sour">
+                    <p><strong> Проект: Семинар по итогам завершения проекта «Проведение энергоаудита системы водоснабжения Сырдариньского района» в Сырдарьинском районе</strong></p>
+                                           
+                    <h4>Период:  2017</h4>
+                    <h4>Заказчик: Швейцарский офис сотрудничества <br> в Узбекистане</h4>
+                                               
+                                      
+                    <button><a href="#">Подробный</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="wrap animate pop" >
+            <div class="overlay">
+                <div class="image-content4 animate slide delay-5">
+
+                </div>
+                <div class="dots animate">
+                <h2>6. Энергетика и энергоаудит</h2>    
+                </div>
+            </div>
+            <div class="text">
+                <div class="sour">
+                    <p> Проект: Организационная поддержка реализации мероприятий по подготовке профессиональных энергоаудиторов в Узбекистане</p>
+                    <h4>Период: 2021 </h4>
+                    <h4>Заказчик: Немецкое энергетическое <br>агентства Дена</h4>
+                    <a href="#">Info</a>                           
+                </div>
+                <div class="sour"></div>
+                <div class="sour"></div>
+                <div class="sour"></div>
+            </div>
+        </div>
+    </section>
+    
+           <div class="direction">
+                        <div class="direction-header"></div>
+                        <div class="projects">
+                            <div class="projectup">
+                                <div class="divide">
+                                    <div class="projectcase">
+                                        <div class="conste">
+                                            <p> Проект: Организационная поддержка реализации мероприятий по подготовке профессиональных энергоаудиторов в Узбекистане</p>
+                                            <div class="data">
+                                                <h4>Период: 2021 </h4>
+                                                <h4>Заказчик: Немецкое энергетическое <br>агентства Дена</h4>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <button></button>
+                                </div>
+
+                                <div class="divide">
+                                    <div class="projectcase">
+                                        <div class="conste">
+                                            <p> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан</p>
+                                            <div class="data">
+                                                <h4>Период: 2016 – 2017</h4>
+                                                <h4>Заказчик: Швейцарский офис сотрудничества <br> в Узбекистане</h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <button><a href="#">Info</a></button>
+                                </div>
+
+                                <div class="divide">
+                                    <div class="projectcase">
+                                        <div class="conste">
+                                            <p>  Проект: Энергоаудит системы водоснабжения отдельных сел Ташкентской области, Узбекистан</p>
+                                            <div class="data">
+                                                <h4>Период: 2019</h4>
+                                                <h4>Заказчик: Сувокава Ташкентской области</h4>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <button><a href="#">Info</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
     <section class="blog_area section-padding">
         <div class="container">
             <section class="philosophy-section">
@@ -388,17 +588,16 @@ p {
                                         </div>
                                     </div>
                                    
-                                    <button><a href="./project_pages/tchcj.html">Info</a></button>
+                                    <button><a href="">Info</a></button>
                                     
                                 </div>
 
                                 <div class="divide">
                                     <div class="projectcase">
                                         <div class="conste">
-                                            <p> Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</p>
+                                            <p> </p>
                                             <div class="data">
-                                                <h4>Период: 2017-2019</h4>
-                                                <h4>Заказчик: Инициатива "Жилищное <br>хозяйство в Восточной Европе" (IWO)</h4>
+                                                
                                                 
                                             </div>
                                         </div>
@@ -409,15 +608,10 @@ p {
                                 <div class="divide">
                                     <div class="projectcase">
                                         <div class="conste">
-                                            <p>  Проект: Promhouse - Профессионализация управления жилищным фондом в Казахстане и Узбекистане</p>
-                                            <div class="data">
-                                                <h4>Период: 2020-2023</h4>
-                                                <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
-                                             
-                                            </div>
+                                            
                                         </div>
                                     </div>
-                                      <a href="./project_pages/prohouse2.html"><button>Info</button></a>
+                                      <a href="."><button>Info</button></a>
                                 </div>
                             </div>
                         </div>
@@ -431,10 +625,10 @@ p {
                                     <div class="projectcase">
                                         <div class="conste">
                                             <p> Проект: «Водоснабжение и санитария Сурхандарьинской области» </p>
-                                            <div class="data">
+                                            
                                                 <h4>Период: 2012 – 2014 </h4>
                                                 <h4>Азиатский Банк Развития </h4>
-                                                         </div>
+                                             
                                         </div>
                                     </div>
                                       <a href="./project_pages/waterand.html"><button>Info</button></a>
@@ -443,31 +637,21 @@ p {
                                 <div class="divide">
                                     <div class="projectcase">
                                         <div class="conste">
-                                            <p> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан</p>
-                                            <div class="data">
-                                                <h4> Период: 2016 – 2017</h4>
-                                                <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
-                                                
-                                               
+                                            
                                             </div>
                                         </div>
                                     </div>
-                                      <a href="./project_pages/sriwater.html"><button>Под</button></a>
+                                      <a href=""><button>Под</button></a>
                                 </div>
 
                                <div class="divide">
                                     <div class="projectcase">
                                         <div class="conste">
-                                            <p> Проект «Улучшение водоснабжения в Акалтынском, Баяутском, Хавастском, Мирзаабадском и Сардобинском районах Сырдарьинской области», Узбекистан.
-Услуги по повышению квалификации персонала Государственного унитарного предприятия«Сувокова» Сырдарьинской области</p>
-                                            <div class="data">
-                                                <h4>Период: 2017 – 2018 </h4>
-                                                <h4> Всемирный Банк</h4>
-                                              
+                                             
                                             </div>
                                         </div>
                                     </div>
-                                      <button><a href="./project_pages/usluga.html">Info</a></button>
+                                      <button><a href="">Info</a></button>
                                 </div>
 
                             </div>
