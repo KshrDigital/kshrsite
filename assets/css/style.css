@@ -118,12 +118,6 @@ body{
   overflow: hidden;
 }
 
-/* One-time animated text */
-.trafaret{
-    font-size: 42px; color: azure;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-style: italic;
-}
 
 /* Animated text */
 .animated-text {
@@ -3526,7 +3520,7 @@ F
     border-radius:13px}
 
 .services-section .single-services .services-img img
-{width:314px;
+{width: 100%;
 height: 300px;}
 
 .services-section 
