@@ -1,18 +1,13 @@
 <?php
-// Telegram Bot Config
-$bot_token = "YOUR_BOT_TOKEN";
-$chat_id = "YOUR_GROUP_CHAT_ID"; // group ID (with -100...)
+$token = "8442875596:AAGGfponmrlAYQqDP64VQa7R_qUCR5TFgM0";
+$chat_id = "7551009599"; // chat_id ni /getUpdates orqali topasiz
 
-// Collect data
 $name = $_POST['name'] ?? '';
 $email = $_POST['email'] ?? '';
-$message = $_POST['message'] ?? '';
 
-$txt = "📥 <b>New Contact Form Message</b>\n";
-$txt .= "👤 Name: $name\n";
-$txt .= "📧 Email: $email\n";
-$txt .= "💬 Message:\n$message";
+$message = "📩 Yangi kontakt ma'lumoti:\n👤 Ism: $name\n📧 Email: $email";
 
-$url = "https://api.telegram.org/bot$bot_token/sendMessage";
+file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=" . urlencode($message));
 
-$send = fopen("$url?chat_id=$chat_id&text=" . urlencode($txt) . "&parse_mode=HTML", "r");
+echo "Message sent successfully!";
+?>
