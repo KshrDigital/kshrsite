@@ -239,7 +239,6 @@
 <script src="../assets/js/jquery.validate.min.js"></script>
 <script src="../assets/js/mail-script.js"></script>
 <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
-
 <form id="multiStepForm" action="send.php" method="POST">
     <!-- Step 1 -->
     <div class="form-step active">
@@ -269,31 +268,5 @@
         </div>
     </div>
 </form>
-
-<script>
-const steps = document.querySelectorAll(".form-step");
-const nextBtns = document.querySelectorAll(".next-btn");
-const prevBtns = document.querySelectorAll(".prev-btn");
-let formStepIndex = 0;
-
-nextBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        steps[formStepIndex].classList.remove("active");
-        formStepIndex++;
-        steps[formStepIndex].classList.add("active");
-    });
-});
-
-prevBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-        steps[formStepIndex].classList.remove("active");
-        formStepIndex--;
-        steps[formStepIndex].classList.add("active");
-    });
-});
-</script>
-
-
-
 </body>
 </html>
