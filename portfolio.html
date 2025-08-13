@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../assets/css/nice-select.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -260,156 +261,306 @@ p {
 .chess{
     min-height: 70vh;
 	display: flex;
-	place-items: center;
-	margin: 0;
-	padding: 0;
+    flex-wrap: wrap;
+	gap: 2rem;
 	
+	padding: 2rem 2rem 0 2rem; /* tepada va ikki chetda 2rem joy */
+    box-sizing: border-box;
 	font-family: "Martel Sans", sans-serif;
 
 }
-.piyoda{
+.custom-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+.custom-card:hover {
+      transform: translateY(-5px);
+    }
+.custom-card img {
+      height: 150px;
+      object-fit: cover;
+    }
+.modal-content {
+      border-radius: 15px;
+    }
+.piyoda {
     text-align: center;
-    width: 25%;
-    border: 4px solid #430d4b;
+    border: 2px solid #430d4b;
     height: 60vmin;
     margin: 1rem auto;
+    flex: 1 1 22%; /* Desktopda 4 ta qator */
+}
+
+@media (max-width: 992px) {
+    .piyoda {
+        flex: 1 1 50%; /* Planshetda 2 ta qator */
+    }
+}
+
+@media (max-width: 576px) {
+    .piyoda {
+        flex: 1 1 100%; /* Telefonlarda 1 qator */
+    }
 }
 .piyoda h4{
     margin-top: 20px;
     color: #430d4b;
     font-weight: bold;
 }
+.card-body h4{
+    font-size: 12px;
+    
+}
+.piyoda img{
+    width: 100%;
+    height: 40vmin;
+}
+.custom-card 
+    { text-align: center;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .custom-card:hover {
+      transform: translateY(-5px);
+    }
+    .custom-card img {
+      height: 250px;
+      object-fit: cover;
+    }
+    .modal-content {
+      border-radius: 15px;
+    }
+    .modalniy{
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        color: #430d4b;
+        border:2px solid #430d4b;
+    }
+    .modalniy:hover{
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        color: #f1eff2;
+        background-color: #430d4b;
+    }
+ .modal-title{
+    font-weight: bold;
+    color: #761386;
+    font-style: italic;
+ }
+    .card-title{
+        font-weight: bold;
+        font-style: italic;
+    }
+    .modal-dialog{
+        width: 100%;
+        height: 200px;
+    }
+    .modal-content{
+        width: 100%;
+        height: 80%;
+
+    }
+    .card-title{
+       font-size: 18px; 
+       color: #430d4b;
+    }
+    .card-body h4{
+        font-size: 15px; 
+       color: #430d4b;
+
+    }
+     .card-body a{
+        font-size: 15px; 
+         
+    }
+      .card-body a:hover{
+        font-size: 15px; 
+        color: #430d4b; 
+        font-weight: bold;
+    }
+    .btn-close {
+  background-image: var(--bs-btn-close-bg);
+}
+
 </style>
 <main>
-
-    <section class="chess">
-         <div class="piyoda">
-            <img src="./assets/img/gallery/social1.jpg" style="width: 100%;" alt="">
-            <h4> Управление жилищным фондом и развитие ТЧСЖ</h4>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Open Modal 1</button>
-
-         </div>
-         <div class="piyoda"></div>
-         <div class="piyoda"></div>
+    <div class="container px-4">
+    <section class="chess row g-4">
+        <div class="piyoda col-12 col-sm-6 col-lg-3">
+            <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
+            <h4>Управление жилищным фондом и развитие ТЧСЖ</h4>
+            <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal1">
+                <strong>Подробный</strong>
+            </button>
+        </div>
+        <div class="piyoda col-12 col-sm-6 col-lg-3">
+            <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
+            <h4>Водоснабжение и санитария</h4>
+            <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal2">
+                <strong>Подробный</strong>
+            </button>
+        </div>
+        <div class="piyoda col-12 col-sm-6 col-lg-3">
+            <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
+            <h4>Климатическая устойчивость и сельское хозяйство.</h4>
+            <button class="btn  modalniy" data-bs-toggle="modal" data-bs-target="#modal3">
+                <strong>Подробный</strong>
+            </button>
+        </div>
     </section>
-    <div class="modal fade" id="modal1" tabindex="-1">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+    </div>
+    
+    
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content p-3">
             <div class="modal-header">
-            <h5 class="modal-title">Modal 1 - Cards</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <h5 class="modal-title"><strong>Управление жилищным фондом и развитие ТЧСЖ</strong></h5>
+              <button type="button" class="btn " style="background-color: #430d4b; color: #f2e1f5;" data-bs-dismiss="modal"><strong>Закрыть</strong></button>
+          
+
             </div>
             <div class="modal-body">
-            <div class="row g-3">
-                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 1</h5><p class="card-text">Some quick example text.</p></div></div></div>
-                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 2</h5><p class="card-text">Some quick example text.</p></div></div></div>
-                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 3</h5><p class="card-text">Some quick example text.</p></div></div></div>
-                <div class="col-md-6 col-lg-3"><div class="card custom-card"><img src="https://via.placeholder.com/300x150" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Card 4</h5><p class="card-text">Some quick example text.</p></div></div></div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-4" >
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Проект: Развитие товариществ собственников жилья и управляющих организаций жилищного фонда</h5>
+                                <h4> Период: 2008-2010</h4>
+                                <h4> Заказчик: Институт экономики города</h4>
+                                <a href="./project_pages/tchcj.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</h5>
+                                                        <h4 > Период: 2008-2010</h4>
+                                                        <h4 > Заказчик: Институт экономики города</h4>
+                                                        <a href="./project_pages/tchcj.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Проект: Promhouse - Профессионализация управления жилищным фондом в Казахстане и Узбекистане</h5>
+                                    <h4>Период: 2020-2023</h4>
+                                    <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
+                                        <a href="/project_pages/prohouse2.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
+              
+       
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content p-3">
+            <div class="modal-header">
+                <h5 class="modal-title"><strong>Водоснабжение и санитария</strong></h5>
+                <button type="button" class="btn " style="background-color: #430d4b; color: #f2e1f5;" data-bs-dismiss="modal"><strong>Закрыть</strong></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-4" >
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Проект: «Водоснабжение и санитария Сурхандарьинской области» </h5>
+                                <h4>Период: 2012 – 2014 </h4>
+                                <h4>Азиатский Банк Развития </h4>
+                                <a href="./project_pages/waterand.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан </h5>
+                                <h4> Период: 2016 – 2017</h4>
+                                <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
+                                <a href="./project_pages/sriwater.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 14px;"> Проект «Улучшение водоснабжения в Акалтынском, Баяутском, Хавастском, Мирзаабадском и Сардобинском районах Сырдарьинской области», Узбекистан.
+                                    Услуги по повышению квалификации персонала Государственного унитарного предприятия«Сувокова» Сырдарьинской области </p>
+                                <h4>Период: 2017 – 2018 </h4>
+                                <h4> Всемирный Банк</h4>
+                                <a href="./project_pages/usluga.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
         </div>
     </div>
 
-    
-    <section class="chesscard">
-        <div class="wrap animate pop" >
-            <div class="overlay">
-                
-                <div class="image-content" >
-                </div>
-               <div class="">
-                    <h2><strong> Развития моделей управления и эксплуатация жилищным фондом. Внедрение энергосбережения в жилищном фонде.</strong></h2>
+     <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content p-3">
+            <div class="modal-header">
+                <h5 class="modal-title"><strong>Климатическая устойчивость и сельское хозяйство.</strong></h5>
+                <button type="button" class="btn " style="background-color: #430d4b; color: #f2e1f5;" data-bs-dismiss="modal"><strong>Закрыть</strong></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-4" >
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств на засушливых территориях Узбекистана» в района: Чимбай и Кегейли </h5>
+                                <h4>Период: 2012 – 2014 </h4>
+                                <h4>Азиатский Банк Развития </h4>
+                                <a href="./project_pages/waterand.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card custom-card w-100" style=" height: 450px ;">
+                            <img src="./assets/img/bgimg.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств в засушливых районах Узбекистана» в районах: Кегейли, Канликул, Чимбай, Тахтакупырский, Муйнакский. </h5>
+                                <h4> Период: 2016 – 2017</h4>
+                                <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
+                                <a href="./project_pages/sriwater.html" >Подробный</a>
+                            </div>
+                        </div>
+                    </div>
+                   
                     
                 </div>
             </div>
-            
-            <div class="text">
-                <div class="sour">
-                    <p ><strong> Проект: Развитие товариществ собственников жилья и управляющих организаций жилищного фонда</strong> </p>
-                    <h4 > Период: 2008-2010</h4>
-                    <h4 > Заказчик: Институт экономики города</h4>
-                    <a href="./project_pages/tchcj.html" >Подробный</a>
-                </div>
-            
-                <div class="sour">
-                    <p style="font-size: 12px;"><strong> Проект: Prohouse - Профессиональное управление жилой недвижимостью в Казахстане и Узбекистане – усовершенствование рынка и жилищных условий</strong> </p>
-                   <h4>Период: 2017-2019</h4>
-                    <h4>Заказчик: Инициатива "Жилищное <br>хозяйство в Восточной Европе" (IWO)</h4>
-                    <a href="./project_pages/prohouse.html" >Подробный</a>
-                </div>
-                <div class="sour">
-                    <p><strong> Проект: Promhouse - Профессионализация управления жилищным фондом в Казахстане и Узбекистане</strong></p>
-                    <h4>Период: 2020-2023</h4>
-                    <h4>Заказчик: Инициатива "Жилищное <br>хозяйство  в Восточной Европе" (IWO)</h4>
-                    <a href="/project_pages/prohouse2.html" >Подробный</a>
-                </div>
-            </div>
         </div>
-        <div class="wrap animate pop" >
-            <div class="overlay">
-                <div class="image-content1 animate slide delay-5">
+        </div>
+    </div>
 
-                </div>
-                <div class="dots animate">
-                <h2><strong> Водоснабжение и санитария</strong></h2>    
-                </div>
-            </div>
-            <div class="text">
-               <div class="sour">
-                    <p><strong> Проект: «Водоснабжение и санитария Сурхандарьинской области» </strong></p>
-                    <h4>Период: 2012 – 2014 </h4>
-                    <h4>Азиатский Банк Развития </h4>
-                    <a href="./project_pages/waterand.html" >Подробный</a>
-                </div>
-            
-                <div class="sour">
-                    <p><strong> Проект: Энергоаудит системы водоснабжения отдельных сел Сырдарьи, Узбекистан </strong></p>
-                    <h4> Период: 2016 – 2017</h4>
-                    <h4>Заказчик: Швейцарский офис <br> сотрудничества в Узбекистане</h4>
-                                          
-                                               
-                    <a href="./project_pages/sriwater.html" >Подробный</a>
-                </div>
-                <div class="sour">
-                    <p> <strong>Проект «Улучшение водоснабжения в Акалтынском, Баяутском, Хавастском, Мирзаабадском и Сардобинском районах Сырдарьинской области», Узбекистан.
-                        Услуги по повышению квалификации персонала Государственного унитарного предприятия«Сувокова» Сырдарьинской области </strong></p>
-                    <h4>Период: 2017 – 2018 </h4>
-                    <h4> Всемирный Банк</h4>
-                           
-                    <a href="./project_pages/usluga.html" >Подробный</a>
-                </div>
-            </div>
-        </div>
-        <div class="wrap animate pop" >
-            <div class="overlay">
-                <div class="image-content12 animate slide delay-5">
-
-                </div>
-                <div class="dots animate">
-                <h2><strong>Климатическая устойчивость и сельское хозяйство. </strong></h2>    
-                </div>
-            </div>
-            <div class="text">
-                <div class="sour">
-                    <p><strong> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств на засушливых территориях Узбекистана» в района: Чимбай и Кегейли</strong></p>
-                                            
-                    <h4>Период: 2016 – 2019</h4>
-                    <h4>Заказчик: ПРООН Узбекистан</h4>
-                                
-                    <a href="./project_pages/adobt1.html" >Подробный</a>                          
-                </div>
-                <div class="sour">
-                    <p><strong>Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств в засушливых районах Узбекистана» в районах: Кегейли, Канликул, Чимбай, Тахтакупырский, Муйнакский.</strong> </p>
-                    <h4>Период: 2017 – 2017</h4>
-                    <h4>Заказчик: ПРООН Узбекистан</h4>
-                    <a href="./project_pages/adobt2.html">Подробный</a>
-                
-                </div>
-            </div>
-        </div>
-        
-    </section>
      <section class="chesscard">
         <div class="wrap animate pop" >
             <div class="overlay">
@@ -749,7 +900,7 @@ p {
                                 <div class="divide">
                                     <div class="projectcase">
                                         <div class="conste">
-                                            <p> Проект: Адаптационный фонд «Обеспечение климатической устойчивости фермеров и дехканских хозяйств в засушливых районах Узбекистана» в районах: Кегейли, Канликул, Чимбай, Тахтакупырский, Муйнакский.</p>
+                                            <p></p>
                                             <div class="data">
                                                 <h4>Период: 2017 – 2017</h4>
                                                 <h4>Заказчик: ПРООН Узбекистан</h4>

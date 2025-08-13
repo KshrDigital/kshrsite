@@ -4678,26 +4678,8 @@ color: #430d4b;}
 
 
 
-button {
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  background: #fff !important;
-  color: #650667 !important;
-  border: 1px solid #650667 !important;
-  
-}
 
-button:hover {
-  padding: 10px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  background: #650667 !important;
-  color: white !important;
-  border: none;
-  border-radius: 6px;
-  
-}
+
 
 
 
@@ -5014,16 +4996,7 @@ textarea {
   resize: none;
 }
 
-button {
-  padding: 10px 20px;
-  background: #820e94;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+
 
 button:hover {
   background: #660b76;
