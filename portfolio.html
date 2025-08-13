@@ -48,7 +48,7 @@
                
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <div>
-                    <img src="../assets/img/logo/logo3.png" alt="Kshr logo" style="height:70px; width:auto;">
+                    <a href="/index.html"><img src="../assets/img/logo/logo3.png" alt="Kshr logo" style="height:70px; width:auto;"></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -80,184 +80,6 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-.chesscard {
-	min-height: 70vh;
-	display: flex;
-	place-items: center;
-	margin: 0;
-	padding: 0;
-	
-	font-family: "Martel Sans", sans-serif;
-}
-
-h1 {
-	font-size: 5.25vmin;
-	text-align: center;
-	color: white;
-}
-p {
-	font-size: max(10pt, 2.5vmin);
-	line-height: 1.4;
-	color: #430d4b;
-	margin-bottom: 1.5rem;
-}
-.wrap {
-	display: flex;
-	
-	width: 70vmin;
-	height: 67vmin;
-	margin: 1rem auto;
-	border: 8px solid;
-	border-image: linear-gradient(
-			-50deg,#761386	)1;
-	transition: 0.3s ease-in-out;
-	position: relative;
-	overflow: hidden;
-}
-.overlay {
-	position: relative;
-	display: flex;
-	width: 100%;
-	height: 100%;
-	padding: 1rem 0.75rem;
-	background: #fff;
-	transition: 0.4s ease-in-out;
-	z-index: 1;
-}
-.image-content {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 70vmin;
-	height: 70%;
-    transition: 0.3s ease-in-out;
-}
-.img-content{
-    width: 100%;
-    background-image: url("./assets/img/experts/kalash.jpg");
-    background-size: cover; 
-}
-.inset {
-	max-width: 50%;
-	margin: 0.25em 1em 1em 0;
-	border-radius: 0.25em;
-	float: left;
-}
-.dots {
-	position: absolute;
-	bottom: 1rem;
-	right: 2rem;
-	display: flex;
-	align-items: center;
-	width: 58vmin;
-	height: 3vmin;
-	transition: 0.3s ease-in-out 0.3s;
-}
-.text {
-	display: grid;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 60vmin;
-	height: 100%;
-	padding: 3vmin 4vmin;
-	background: #fff;
-	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
-	overflow-y: scroll;
-}
-.tree {
-	place-self: center;
-	width: calc(50px + 2vw);
-}
-/*
-.wrap.active .overlay {
-	transform: translateX(-60vmin);
-}
-.wrap.active .image-content {
-	width: 30vmin;
-}
-.wrap.active .overlay-content {
-	border: none;
-	transition-delay: 0.2s;
-	transform: translateX(60vmin);
-}
-.wrap.active .dots {
-	transform: translateX(1rem);
-}
-.wrap.active .dots .dot {
-	background: white;
-}*/
-
-.sour{
-    text-align: center;
-   
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    border:2px solid #761386 ;
-    margin-bottom: 10px;
-}
-
-/* Pop In */
-.pop {
-	animation-name: pop;
-}
-
-/* Slide In */
-
-.delay-1 {
-	animation-delay: 0.3s;
-}
-.delay-2 {
-	animation-delay: 0.6s;
-}
-.delay-3 {
-	animation-delay: 0.9s;
-}
-.delay-4 {
-	animation-delay: 1.2s;
-}
-.delay-5 {
-	animation-delay: 1.5s;
-}
-.delay-6 {
-	animation-delay: 1.8s;
-}
-.delay-7 {
-	animation-delay: 2.1s;
-}
-.delay-8 {
-	animation-delay: 2.4s;
-}
-.sour p {
-    font-size: 14px; font-style: italic;
-}
-.sour h4{
-    font-size: 12px;
-}
-.sour h3{
-    font-size: 15px;
-}
-.sour img{
-    margin-top: 20px;
-}
-.sour a{
-   font-weight: bold;
-    margin-bottom: 20px;
-    background-color: #430d4b;
-    color: #f1eff2;
-}
-.sour:hover a{
-    border-bottom: 2px solid #430d4b;
-   font-weight: bold;
-    background-color: #430d4b;
-    color: #f2e1f5;
-    margin-bottom: 20px;
-}
-.dots h2{
-    font-size: 15px;
-}
-
 .chess{
     min-height: 70vh;
 	display: flex;
@@ -286,10 +108,19 @@ p {
 .modal-content {
       border-radius: 15px;
     }
+    .card-custom {
+      width: 100%;
+      
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
 .piyoda {
+    max-width: 350px;
+      height: 350px;
     text-align: center;
-    border: 2px solid #430d4b;
-    height: 60vmin;
+    background-color: #430d4b;  
     margin: 1rem auto;
     flex: 1 1 22%; /* Desktopda 4 ta qator */
 }
@@ -307,7 +138,7 @@ p {
 }
 .piyoda h4{
     margin-top: 20px;
-    color: #430d4b;
+    color: #ffff;
     font-weight: bold;
 }
 .card-body h4{
@@ -316,7 +147,7 @@ p {
 }
 .piyoda img{
     width: 100%;
-    height: 40vmin;
+    height: 35vmin;
 }
 .custom-card 
     { text-align: center;
@@ -342,17 +173,17 @@ p {
 }
     .modalniy{
         width: 150px;
-        height: 40px;
+        height: 35px;
         font-size: 16px;
-        color: #430d4b;
-        border:2px solid #430d4b;
+        color: #ffff;
+        border:2px solid #ffff;
     }
     .modalniy:hover{
         width: 150px;
-        height: 40px;
+        height: 35px;
         font-size: 16px;
-        color: #f1eff2;
-        background-color: #430d4b;
+        color: #430d4b;
+        background-color: #f1eff2;
     }
  .modal-title{
     font-weight: bold;
