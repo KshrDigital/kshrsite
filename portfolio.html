@@ -75,11 +75,7 @@
 <!-- Header End -->
 </header>
 <style>
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
+
 
 
     @font-face {
@@ -93,14 +89,7 @@
     }
 
    
-   .manbody{
-    width: 100%;
-    margin: 0;
- padding-top: 50px;
-   }
-    
-
-    .card-custom {
+     .card-custom {
       width: 100%;
       max-width: 350px;
       height: 350px;
@@ -156,6 +145,13 @@
       margin-bottom: 24px;
       padding-bottom: 24px;
       border-bottom: 1px solid rgba(232, 224, 224, 0.922);
+      opacity: 0;
+      transition: 0.5s;
+    }
+       .infos .seats1 {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      
       opacity: 0;
       transition: 0.5s;
     }
@@ -272,17 +268,17 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s ease-in-out;
     }
-    .custom-card:hover {
+.custom-card:hover {
       transform: translateY(-5px);
     }
-    .custom-card img {
+.custom-card img {
       height: 250px;
       object-fit: cover;
     }
-    .modal-content {
+.modal-content {
       border-radius: 15px;
     }
-    .modal-body {
+.modal-body {
   max-height: 70vh; /* Ekran balandligining 70% */
   overflow-x: auto;
 }
@@ -370,10 +366,11 @@
       <!-- CARD 2 -->
       <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
         <article class="card-custom">
-          <div class="thumb" style="background-image: url('./assets/img/portfolio/water.jpg');"></div>
+          <div class="thumb" style="background-image: url('./assets/img/portfolio/water2.jpg');"></div>
           <div class="infos">
             <h2 class="title">Водоснабжение и санитария </h2>
             <h3 class="seats"></h3>
+             <h3 class="seats1"></h3>
             <p class="txt">Text</p>
             <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal2">Подробно</h3>
           </div>
@@ -383,7 +380,7 @@
       <!-- CARD 3 -->
       <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
         <article class="card-custom">
-          <div class="thumb" style="background-image: url('./assets/img/portfolio/climate.jpg');"></div>
+          <div class="thumb" style="background-image: url('./assets/img/portfolio/climate2.jpg');"></div>
           <div class="infos">
             <h2 class="title">Климатическая устойчивость и сельское хозяйство. </h2>
             <h3 class="seats"></h3>
