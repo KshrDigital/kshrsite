@@ -80,6 +80,121 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+
+    @font-face {
+      font-family: "Arimo";
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Regular.woff");
+    }
+
+    @font-face {
+      font-family: "Grotesque Black";
+      src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/BrandonGrotesque-Black.woff");
+    }
+
+   
+   .manbody{
+    width: 100%;
+    margin: 0;
+ padding-top: 50px;
+   }
+    
+
+    .card-custom {
+      width: 100%;
+      max-width: 350px;
+      height: 350px;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      margin: auto;
+    }
+
+    .card-custom .thumb {
+      height: 260px;
+      background: url("") no-repeat center;
+      background-size: cover;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .card-custom .infos {
+      position: relative;
+      background: #430d4b;
+      height: 350px;
+      padding: 14px 24px;
+      transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+    }
+
+    .infos .title {
+      margin: 10px 0;
+      letter-spacing: 3px;
+      color: #ffff;
+      font-weight: bold;
+      font-family: "Grotesque Black", sans-serif;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+    }
+
+    .infos .flag {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      width: 35px;
+      height: 23px;
+      background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/flag.png") no-repeat top right;
+      background-size: 100% auto;
+    }
+
+    .infos .date,
+    .infos .seats {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: rgba(21, 37, 54, 0.7);
+    }
+
+    .infos .seats {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .infos .txt {
+      line-height: 2;
+      font-size: 1.3rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: #f1eff2;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .infos .details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 10px 0;
+      padding: 20px 24px;
+      letter-spacing: 1px;
+      color: #ffff ;
+      font-family: "Grotesque Black", sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .card-custom:hover .infos {
+      transform: translateY(-260px);
+    }
+
+    .card-custom:hover .seats,
+    .card-custom:hover .txt,
+    .card-custom:hover .details {
+      opacity: 1;
+    }
 .chess{
     min-height: 70vh;
 	display: flex;
@@ -228,77 +343,142 @@
 
 </style>
 <main>
-    <div class="container px-4">
-        <section class="chess row g-4">
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Управление жилищным фондом и развитие ТЧСЖ</h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal1">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Водоснабжение и санитария</h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal2">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Климатическая устойчивость и сельское хозяйство.</h4>
-                <button class="btn  modalniy" data-bs-toggle="modal" data-bs-target="#modal3">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-        </section>
-        <section class="chess row g-4">
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Централизованное теплоснабжение и энергоэффективность</h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal4">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Повышение квалификации и развитие кадрового потенциала</h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal5">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Энергетика и энергоаудит</h4>
-                <button class="btn  modalniy" data-bs-toggle="modal" data-bs-target="#modal6">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-        </section>
-        <section class="chess row g-4">
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Командообразование </h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal7">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Социологическое исследование</h4>
-                <button class="btn modalniy" data-bs-toggle="modal" data-bs-target="#modal8">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-            <div class="piyoda col-12 col-sm-6 col-lg-3">
-                <img src="./assets/img/gallery/social1.jpg" class="img-fluid" alt="">
-                <h4>Образовательные стади-туры</h4>
-                <button class="btn  modalniy" data-bs-toggle="modal" data-bs-target="#modal9">
-                    <strong>Подробный</strong>
-                </button>
-            </div>
-        </section>
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-10 col-md-12">
+        <div class="section-tittle text-center mb-20 mt-30 " >
+          <span style="color: #430d4b;">Наши проекты</span>                           
+        </div> 
     </div>
+</div>
+
+<div class="container" >
+    <div class="row g-4 justify-content-center">
+
+      <!-- CARD 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('./assets/img/gallery/social1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Управление жилищным фондом и развитие ТЧСЖ </h2>
+              <h3 class="seats"></h3>
+            <p class="txt">Text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal1">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('./assets/img/gallery/social1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Водоснабжение и санитария </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">Text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal2">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('./assets/img/gallery/social1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Климатическая устойчивость и сельское хозяйство. </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal3">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('./assets/img/gallery/social1.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Централизованное теплоснабжение и энергоэффективность </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">tetx</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal4">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      
+      <!-- CARD 5 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/confres.jpeg');"></div>
+          <div class="infos">
+            <h2 class="title">Повышение квалификации и развитие кадрового потенциала</h2>
+            
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal5">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+       <!-- CARD 6 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/studytour.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Энергетика и энергоаудит </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal6">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/agro.webp');"></div>
+          <div class="infos">
+            <h2 class="title">Командообразование</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal7">Подробно</h3>
+          </div>
+        </article>
+      </div>
+  
+      <!-- CARD 8 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/legal.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Социологическое исследование</h2>
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal8">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+     
+      <!-- CARD 9 -->
+      <div class="col-12 col-sm-6 col-lg-4 mt-30 d-flex justify-content-center">
+        <article class="card-custom">
+          <div class="thumb" style="background-image: url('assets/img/serviceimg/itserv.jpg');"></div>
+          <div class="infos">
+            <h2 class="title">Образовательные стади-туры </h2>
+            <h3 class="seats"></h3>
+            <p class="txt">text</p>
+            <h3 class="details" data-bs-toggle="modal" data-bs-target="#modal9">Подробно</h3>
+          </div>
+        </article>
+      </div>
+
+      
+    </div>
+</div>
+
+ 
     
     
     <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
