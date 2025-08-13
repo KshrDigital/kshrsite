@@ -104,6 +104,9 @@ body{
     border: none;
     cursor: pointer;
 }
+.mobtug{
+    color: #430d4b;
+}
 
 .hero-section {
   position: relative;
@@ -1302,6 +1305,14 @@ padding-bottom:100px}}
 .nav-link {
     color: #430d4b !important;
     
+}
+.navbar-toggler {
+    background-color: #430d4b; /* Qoramtir kulrang */
+    border-color: #ffffff; /* Oq chegara */
+}
+
+.navbar-toggler .fa-bars {
+    color: #fff; /* Sariq ikonka */
 }
 .navbar-nav .nav-link {
     
