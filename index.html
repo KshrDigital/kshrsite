@@ -85,63 +85,32 @@
     
     <!-- Banner: Sayt test rejimida -->
     
-  </header> 
-   <style>
-    .my-nav{
-        position: absolute;
-        z-index: 10;
-        width: 100%;
-        }
+ <div class="video-container">
+  <video autoplay muted loop playsinline>
+    <source src="kshrsite/videosbg/mainpage.MOV" type="video/mp4">
+    Brauzeringiz video formatini qo‘llab-quvvatlamaydi.
+  </video>
+</div>
 
-        .carousel-item {
-            width: 100%;
-        height: 70vh;
-        background: no-repeat center center scroll;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        }
-   </style>
+<style>
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 600px; /* kerakli balandlik */
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
 
 <main>
 
-    <div id="carouselExampleIndicators" style="margin: 0; padding: 0; width: 100%;" class="carousel slide my-carousel my-carousel" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-     
-        <!--<div class="carousel-inner" role="listbox">
-            <<div class="carousel-item active" style="width: 100%; background-image: url('./assets/img/confrence.JPG')"> 
-
-            </div>
-           < <div class="carousel-item " style="width: 100%; background-image: url('./assets/img/gallery/trening.JPG')">  
-
-            </div>
-            <div class="carousel-item " style="width: 100%; background-image: url'./assets/img/slider/konfre.jpg')">
-
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" style=""  aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>-->
-       
-
-  
-    
-
-
-    
-
-    <!--? Services Area Start -->
+     <!--? Services Area Start -->
     <section class="services-section section-padding" >
         <div class="container" >
             <!-- Home Blog Start -->
