@@ -82,94 +82,137 @@
     </section>
 
     <!--! About Area Start 01 -->
-    <div class="container mt-30 ">
-        <div class="catalog-container">
-                     
-                <div class="katalog">
-                    <img src="https://surxonarx.uz//uploads/news/201/l_f79e87cb94e6f7d5eb8370fe4b7bf58f.png" style="width: 160px; height: 160px; margin-left: 30px;" alt="Rasm">
-                    <h3>Министерство строительства и жилищно-коммунального хозяйстве</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+    <div class="container mt-30">
+    <div class="catalog-container">
+        
+        <div class="katalog">
+            <div class="katalog-img">
+                <img src="https://surxonarx.uz//uploads/news/201/l_f79e87cb94e6f7d5eb8370fe4b7bf58f.png" alt="Rasm">
+            </div>
+            <div class="katalog-content">
+                <h3>Министерство строительства и жилищно-коммунального хозяйстве</h3>
+                <p>проект</p>
+            </div>
+            <a href="#" class="katalog-btn">Полная информация</a>
+        </div>
 
-                <div class="katalog">
-                    <img src="https://www.mintrans.uz/logo/logooz.svg"  style="width: 200px; height: 160px; margin-left: 20px;" alt="Rasm">
-                    <h3>Министерство Транспорта Республики Узбекистан</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+        <div class="katalog">
+            <div class="katalog-img">
+                <img src="https://www.mintrans.uz/logo/logooz.svg" alt="Rasm">
+            </div>
+            <div class="katalog-content">
+                <h3>Министерство Транспорта Республики Узбекистан</h3>
+                <p>проект</p>
+            </div>
+            <a href="#" class="katalog-btn">Полная информация</a>
+        </div>
 
-                <div class="katalog">
-                    <img src="https://st.jtsu.uz/cache/5/1/0/f/b/510fbe62e87336f0672d352968c8ff758d0c5873.png"  style="width: 160px; height: 160px; margin-left: 30px;" alt="Rasm">
-                    <h3 style="">Министерство высшего образования, науки и инноваций Республики Узбекистан </h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+        <div class="katalog">
+            <div class="katalog-img">
+                <img src="https://st.jtsu.uz/cache/5/1/0/f/b/510fbe62e87336f0672d352968c8ff758d0c5873.png" alt="Rasm">
+            </div>
+            <div class="katalog-content">
+                <h3>Министерство высшего образования, науки и инноваций Республики Узбекистан</h3>
+                <p>проект</p>
+            </div>
+            <a href="#" class="katalog-btn">Полная информация</a>
+        </div>
 
-                <div class="katalog">
-                    <img src="../assets/img/ipotekabank_01.png"  style="width: 250px; height: 160px;" alt="Rasm">
-                    <h3>Ипотечный банк ОТП Групп</h3>
-                        <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+        <div class="katalog">
+            <div class="katalog-img">
+                <img src="../assets/img/ipotekabank_01.png" alt="Rasm">
+            </div>
+            <div class="katalog-content">
+                <h3>Ипотечный банк ОТП Групп</h3>
+                <p>проект</p>
+            </div>
+            <a href="#" class="katalog-btn">Полная информация</a>
+        </div>
 
-                <div class="katalog">
-                    <img src="https://www.un.org/sites/un2.un.org/files/field/image/world-bank-logo_0.jpg"  
-                    style="width: 180px; height: 160px; margin-left: 20px;" alt="Rasm">
-                    <h3>Группа Всемирного банка</h3>
-                    <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+    </div>
+</div>
+    /* Konteynerni setka (grid) ko'rinishiga keltiramiz */
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 0;
+}
 
-                <div class="katalog">
-                    <img src="https://www.shiftcities.org/sites/default/files/styles/og_image/public/2021-11/ADB%20logo%20stacked.png?itok=c8mszcVB" style="width: 180px; height: 160px; margin-left: 20px;" alt="Rasm">
-                    <h3 style="font-size: 18px;">Азиатский банк развития</h3>
-                    <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+/* Har bir karta stili */
+.katalog {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    width: 300px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column; /* Elementlarni ustun qilib teradi */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-                 <div class="katalog">
-                    <img src="../assets/img/partners/UNDP-logo.webp" style="width:x; height: 160px; margin-left: 0px;" alt="Rasm">
-                    <h3>Программа развития Организации Объединенных Наций</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
-                
-                <div class="katalog">
-                    <img src="https://www.iagua.es/sites/default/files/logo_cytsa_1.jpg" style="width: 180px; height: 160px; margin-left: 20px;" alt="Rasm">
-                    <h3 style="font-size: 14px;">CREATIVIDAD Y TECNOLOGÍA</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
- 
-                <div class="katalog">
-                    <img src="https://www.iagua.es/sites/default/files/logo_cytsa_1.jpg" style="width: 180px; height: 160px; margin-left: 20px;" alt="Rasm">
-                    <h3 style="font-size: 14px;">VIOLA</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
-                              
-                <div class="katalog">
-                    <img src="../assets/img/partners/dena_logo.png" style="width: 200px; height: 160px; margin-left: 15px;" alt="Rasm">
-                    <h3>DENA</h3>
-                      <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
-                
-                <div class="katalog">
-                    <img src="https://ef-l.eu/wp-content/uploads/2020/06/efl-member-page-iwo-logo.jpg"  style="width: 200px; height: 160px; margin-left: 20px;"alt="Rasm">
-                    <h3>IWO</h3>
-                       <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
-                  <div class="katalog">
-                    <img src="../assets/img/logo/kwwa.jpg"  style="width: 150px; height: 160px; margin-left: 40px;" alt="Rasm">
-                    <h3>KWWA</h3>
-                      <p>проект</p>
-                    <button><a href="#">Полная информация</a></button>
-                </div>
+.katalog:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
 
+/* Rasm maydoni */
+.katalog-img {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
+.katalog-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Matn qismi - bu qism bo'sh joyni to'ldiradi */
+.katalog-content {
+    flex-grow: 1; /* Matn qisqa bo'lsa ham joyni egallaydi */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.katalog h3 {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.katalog p {
+    color: #888;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+/* TUGMA - Hamma tugmalar bir xil bo'lishi uchun */
+.katalog-btn {
+    display: block;
+    background-color: #258aff; /* Havorang */
+    color: #ffffff !important;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Tugmani har doim pastga mixlaydi */
+}
+
+.katalog-btn:hover {
+    background-color: #006ce6;
+    text-decoration: none;
+}
 
 
                              
